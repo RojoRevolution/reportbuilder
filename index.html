@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Builder Prototype</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="/../styles/theme.css">
+    <link rel="stylesheet" href="/../styles/main.css">
+    <link rel="stylesheet" href="/../styles/components.css">
+    <link rel="stylesheet" href="/../styles/page.css">
+</head>
+
+<body>
+    <!-- HEADERS -->
+    <header>
+        <div id="mainheader" class="d-flex justify-content-between align-items-center">
+            <div class="d-flex">
+                <a class="btn dr-btn-tertiary inverse">Exit Report Builder</a>
+            </div>
+            <div class="d-flex">
+                <div class="d-flex gap-2">
+                    <span>Report Technical Issue:</span>
+                    <div class="d-flex align-items-start gap-2">
+                        <button class="btn dr-utility dr-blue">Scan Loading Issue</button>
+                        <button class="btn dr-utility dr-blue">Incomplete Scan</button>
+                        <button class="btn dr-utility dr-blue">Other</button>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex gap-2">
+                <a class="btn dr-btn-tertiary inverse">Preview Report</a>
+                <a class="btn dr-btn-primary">Click to Sign Report</a>
+
+            </div>
+        </div>
+        <div id="subheader" class="d-flex row">
+            <div class="d-flex justify-content-between align-items-center">
+                <h2 class="d-flex">Patient Name</h2>
+                <div class="d-flex gap-2">
+                    <div class="no-sig-find"><i class="bi bi-check-circle"></i></div>
+                    No Significant Findings
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- MAIN CONTENT -->
+    <section class="d-flex">
+        <!-- Macros Section -->
+        <div id="macros" class="d-flex">
+            sdf
+        </div>
+        <!-- Report Builder Section -->
+        <div id="builder-col" class="d-flex flex-grow-1">
+            <div class="d-flex flex-column panel gap-3">
+                <div class="d-flex justify-content-between">
+                    <h3>Report Builder</h3>
+                    <div class="d-flex">
+                        <button class="btn dr-utility" disabled>Load Previous Session</button>
+                    </div>
+                </div>
+                <div class="d-flex">
+                    <div id="textArea" class="d-flex flex-column gap-4">
+                        <div id="artifact" class="report-section" contenteditable="true">
+                            No artifact detected
+                        </div>
+                        <div class="d-flex flex-column">
+                            <label>Maxilla:</label>
+                            <div id="maxilla" class="report-section" contenteditable="true">
+                                No suspicious mass lesion. No evidence of expansile, lucent or sclerotic lesion. Bone
+                                cortex
+                                intact. No lesions involving body or ramus of mandible.
+                            </div>
+                        </div>
+                        <div class="d-flex flex-column">
+                            <label>Mandible:</label>
+                            <div id="mandible" class="report-section" contenteditable="true">
+                                No suspicious mass lesion. No evidence of expansile, lucent or sclerotic lesion. Bone
+                                cortex
+                                intact. No lesions involving body or ramus of mandible. </div>
+                        </div>
+                        <div class="d-flex flex-column">
+                            <label>Alveolar/Teeth:</label>
+                            <div id="alveolar" class="report-section" contenteditable="true">
+                                No CT evidence of significant periapical lucencies or dental caries. The buccal and
+                                lingual
+                                cortices are intact. </div>
+                        </div>
+                        <div class="d-flex flex-column">
+                            <label>Nasopharynx:</label>
+                            <div id="nasopharynx" class="report-section" contenteditable="true">
+                                Unremarkable CT appearance of the nasopharynx. No evidence of mass lesion or abnormal
+                                effacement of the pharyngeal recesses or fossa of Rosenmuller. </div>
+                        </div>
+                        <div class="d-flex flex-column">
+                            <label>Oropharynx/Airway:</label>
+                            <div id="oropharynx" class="report-section" contenteditable="true">
+                                No suspicious mass lesion or mass like structure within the visualized airway, within
+                                limitation of CBCT technique. The general volume of the palatine and lingual tonsils is
+                                within normal limits for age. Any localizing symptoms should prompt further workup with
+                                direct visualization, contrast enhanced CT, MRI and/or laryngoscopy. </div>
+                        </div>
+                        <div class="d-flex flex-column">
+                            <label>Paranasal Sinuses:</label>
+                            <div id="paranasal" class="report-section" contenteditable="true">
+                                Paranasal sinuses within the field of view are well pneumatized and clear. Patent sinus
+                                drainage pathways. No significant sinus mucosal thickening or mucus retention cysts. No
+                                significant nasal septal deviation or septal bone spur. </div>
+                        </div>
+                        <div class="d-flex flex-column">
+                            <label>Skull Base and Temporal Bones:</label>
+                            <div id="skullbase" class="report-section" contenteditable="true">
+                                Unremarkable CT appearance of the clivus and petrooccipital fissure with no suspicious
+                                lucent or destructive lesion. Normal appearance of the sella turcica without evidence of
+                                suspicious expansile or erosive lesion.
+                                Visualized portions of the mastoid air cells and/or pneumatized petrous apices are
+                                clear.
+                                Visualized portions of the external auditory canals, middle ears and inner ears are
+                                within
+                                normal limits. </div>
+                        </div>
+                        <div class="d-flex flex-column">
+                            <label>Temporomadibular Joints:</label>
+                            <div id="tmj" class="report-section" contenteditable="true">
+                                Normal CT appearance of the temporomandibular joint. The mandibular condyle demonstrates
+                                normal rounded morphology with no flattening or irregularity of the articular surface.
+                                No
+                                significant subchondral sclerosis or joint space narrowing. Normal appearance of the
+                                condylar fossa. </div>
+                        </div>
+                        <div class="d-flex flex-column">
+                            <label>Visualized Cervical Spine:</label>
+                            <div id="cervical" class="report-section" contenteditable="true">
+                                Normal appearance of the visualized cervical spine. The cervical vertebrae are normal in
+                                height and alignment. Normal appearance of the craniocervical junction and atlantodental
+                                joint. </div>
+                        </div>
+                        <div class="d-flex flex-column">
+                            <label>Salivary Glands Lymph Nodes and Soft Tissues:</label>
+                            <div id="salivary" class="report-section" contenteditable="true">
+                                Limited evaluation of soft tissues and lowered sensitivity to detect pathology due to
+                                bone
+                                optimized CBCT technique. Within these limits, there is no gross abnormality of the
+                                visualized soft tissues and no appreciable mass lesion or lymphadenopathy. </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

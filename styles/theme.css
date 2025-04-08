@@ -1,0 +1,361 @@
+/* ===== Theme ====== */
+:root {
+    /* ================================== */
+    /* ======= Design System 2.0 ======== */
+    /* ================================== */
+
+    /* ======= Primitives ======= */
+
+    /* Alpha Colors of Primitives */
+    --alpha-black-0: rgba(0, 0, 0, 0);
+    --alpha-black-15: rgba(0, 0, 0, .15);
+    --alpha-black-2: rgba(0, 0, 0, .2);
+    --alpha-black-3: rgba(0, 0, 0, .3);
+    --alpha-black-5: rgba(0, 0, 0, .5);
+    --alpha-black-75: rgba(0, 0, 0, .75);
+
+    --alpha-blue-500-0: rgba(11, 113, 221, 0);
+    --alpha-blue-500-10: rgba(11, 113, 221, .1);
+    --alpha-blue-500-25: rgba(11, 113, 221, .25);
+    --alpha-blue-500-50: rgba(11, 113, 221, .5);
+    --alpha-blue-500-75: rgba(11, 113, 221, .75);
+
+    --alpha-danger-300-0: rgba(255, 154, 139, 0);
+    --alpha-danger-300-10: rgba(255, 154, 139, .1);
+    --alpha-danger-600-0: rgba(255, 154, 139, 0);
+    --alpha-danger-600-10: rgba(255, 154, 139, .1);
+    --alpha-danger-600-25: rgba(255, 154, 139, .25);
+    --alpha-danger-600-50: rgba(255, 154, 139, .5);
+    --alpha-danger-600-75: rgba(255, 154, 139, .75);
+
+    --alpha-white-0: rgba(255, 255, 255, 0);
+    --alpha-white-10: rgba(255, 255, 255, .1);
+    --alpha-white-25: rgba(255, 255, 255, .25);
+    --alpha-white-50: rgba(255, 255, 255, .5);
+    --alpha-white-75: rgba(255, 255, 255, .75);
+
+    --alpha-neutral-100-0: rgba(249, 249, 249, 0);
+    --alpha-neutral-200-0: rgba(239, 240, 242, 0);
+
+    --basic-white: white;
+    --basic-black: black;
+    --basic-off-white: #F8F9FA;
+    --basic-off-black: #222222;
+
+    --blue-100: #E4EFFB;
+    --blue-200: #ADCFF3;
+    --blue-300: #77AFEB;
+    --blue-400: #408FE3;
+    --blue-500: #0B71DD;
+    --blue-600: #0853A4;
+    --blue-700: #05386E;
+    --blue-800: #042A52;
+    --blue-900: #022041;
+
+    --danger-100: #FFEBE8;
+    --danger-200: #FFC3B9;
+    --danger-300: #FF9A8B;
+    --danger-400: #FF725C;
+    --danger-500: #FF492D;
+    --danger-600: #BF3823;
+    --danger-700: #802517;
+    --danger-800: #601C11;
+    --danger-900: #51140A;
+
+    --neutral-100: #F9F9F9;
+    --neutral-200: #EFF0F2;
+    --neutral-300: #DCDFE4;
+    --neutral-400: #B3B9C4;
+    --neutral-500: #8590A2;
+    --neutral-600: #596773;
+    --neutral-700: #454F59;
+    --neutral-800: #38414A;
+    --neutral-900: #2C333A;
+    --neutral-1000: #293035;
+    --neutral-1100: #22272B;
+    --neutral-1200: #1E2327;
+
+    --success-100: #EAF6E6;
+    --success-200: #C1E4B4;
+    --success-300: #97D381;
+    --success-400: #6EC14F;
+    --success-500: #44AF1D;
+    --success-600: #338316;
+    --success-700: #22580F;
+    --success-800: #1A420B;
+    --success-900: #143508;
+
+    --warning-100: #FFF7D6;
+    --warning-200: #F8E6A0;
+    --warning-300: #F5CD47;
+    --warning-400: #E2B203;
+    --warning-500: #CF9F02;
+    --warning-600: #B38600;
+    --warning-700: #946F00;
+    --warning-800: #7F5F01;
+    --warning-900: #533F04;
+
+    /* Size */
+    --size-0: 0;
+    --size-2px: 0.125rem;
+    --size-4px: 0.25rem;
+    --size-6px: 0.375rem;
+    --size-8px: 0.5rem;
+    --size-12px: 0.75rem;
+    --size-14px: 0.875rem;
+    --size-16px: 1rem;
+    --size-18px: 1.125rem;
+    --size-20px: 1.25rem;
+    --size-24px: 1.5rem;
+    --size-28px: 1.75rem;
+    --size-32px: 2rem;
+    --size-36px: 2.25rem;
+    --size-40px: 2.5rem;
+    --size-48px: 3rem;
+    --size-60px: 3.75rem;
+
+    /* Weight */
+    --weight-100: 100;
+    --weight-200: 200;
+    --weight-300: 300;
+    --weight-400: 400;
+    --weight-500: 500;
+    --weight-600: 600;
+    --weight-700: 700;
+    --weight-800: 800;
+    --weight-900: 900;
+
+    /* Font */
+    --font-poppins: 'Poppins';
+    --font-roboto: 'Roboto';
+
+    /* ======= Semantic Colors ======= */
+    /* Surface: General Background */
+    --dr-color-background-primary: var(--neutral-100);
+    --dr-color-background-accent: var(--neutral-300);
+    --dr-color-background-primary-inverse: var(--neutral-900);
+    --dr-color-background-white: var(--basic-white);
+    --dr-color-background-black: var(--basic-black);
+    --dr-color-background-brand: var(--blue-500);
+    --dr-color-background-brand-accent: var(--blue-900);
+
+    /* General Status Colors  */
+    --dr-color-background-danger-default: var(--danger-100);
+    --dr-color-background-danger-bold: var(--danger-600);
+    --dr-color-background-success-default: var(--success-100);
+    --dr-color-background-success-bold: var(--success-600);
+    --dr-color-background-warning-default: var(--warning-100);
+    --dr-color-background-warning-bold: var(--warning-600);
+
+    /* Surface: Interactive Element Background */
+    /* --dr-color-surface-interactive-blue-default: var(--blue-500);
+    --dr-color-surface-interactive-blue-hover: var(--blue-600);
+    --dr-color-surface-interactive-blue-active: var(--blue-700); */
+
+    --dr-color-background-button-primary-default: var(--blue-500);
+    --dr-color-background-button-primary-hover: var(--blue-600);
+    --dr-color-background-button-primary-active: var(--blue-700);
+
+    --dr-color-background-button-primary-danger-default: var(--danger-600);
+    --dr-color-background-button-primary-danger-hover: var(--danger-700);
+    --dr-color-background-button-primary-danger-active: var(--danger-800);
+
+    /* --dr-color-surface-interactive-inverse-default: var(--neutral-100);
+    --dr-color-surface-interactive-inverse-hover: var(--neutral-300);
+    --dr-color-surface-interactive-inverse-active: var(--neutral-400); */
+
+    --dr-color-background-button-primary-inverse-default: var(--neutral-100);
+    --dr-color-background-button-primary-inverse-hover: var(--neutral-300);
+    --dr-color-background-button-primary-inverse-active: var(--neutral-400);
+
+    /* --dr-color-surface-interactive-blue-alpha-0: var(--alpha-blue-500-0);
+    --dr-color-surface-interactive-blue-alpha-10: var(--alpha-blue-500-10);
+    --dr-color-surface-interactive-blue-alpha-25: var(--alpha-blue-500-25); */
+
+    --dr-color-background-button-secondary-default: var(--alpha-blue-500-0);
+    --dr-color-background-button-secondary-hover: var(--alpha-blue-500-10);
+    --dr-color-background-button-secondary-active: var(--alpha-blue-500-25);
+
+    --dr-color-background-button-tertiary-default: var(--alpha-blue-500-0);
+    --dr-color-background-button-tertiary-hover: var(--alpha-blue-500-10);
+    --dr-color-background-button-tertiary-active: var(--alpha-blue-500-25);
+
+    /* --dr-color-surface-interactive-danger-default: var(--danger-600);
+    --dr-color-surface-interactive-danger-hover: var(--danger-700);
+    --dr-color-surface-interactive-danger-active: var(--danger-800); */
+
+    /* --dr-color-surface-interactive-danger-alpha-0: var(--alpha-danger-600-0);
+    --dr-color-surface-interactive-danger-alpha-10: var(--alpha-danger-600-10);
+    --dr-color-surface-interactive-danger-alpha-25: var(--alpha-danger-600-25); */
+
+    --dr-color-background-button-secondary-danger-default: var(--alpha-danger-600-0);
+    --dr-color-background-button-secondary-danger-hover: var(--alpha-danger-600-10);
+    --dr-color-background-button-secondary-danger-active: var(--alpha-danger-600-25);
+
+    /* --dr-color-surface-interactive-inverse-0: var(--alpha-white-0);
+    --dr-color-surface-interactive-inverse-10: var(--alpha-white-10);
+    --dr-color-surface-interactive-inverse-25: var(--alpha-white-25); */
+
+    --dr-color-background-button-secondary-inverse-default: var(--alpha-white-0);
+    --dr-color-background-button-secondary-inverse-hover: var(--alpha-white-10);
+    --dr-color-background-button-secondary-inverse-active: var(--alpha-white-25);
+    /* 
+    --dr-color-background-utility-default: var(--neutral-200);
+    --dr-color-background-utility-hover: var(--neutral-300);
+    --dr-color-background-utility-active: var(--neutral-400); */
+
+    --dr-color-background-button-utility-default: var(--neutral-200);
+    --dr-color-background-button-utility-hover: var(--neutral-300);
+    --dr-color-background-button-utility-active: var(--neutral-400);
+
+    --dr-color-background-tableAction-default: var(--alpha-grey-100-0);
+    --dr-color-background-tableAction-hover: var(--neutral-100);
+    --dr-color-background-tableAction-active: var(--neutral-200);
+
+    --dr-color-background-form-input: var(--basic-white);
+
+    /* Border Colors */
+    --dr-color-border-primary: var(--neutral-400);
+    --dr-color-border-primary-inverse: var(--neutral-100);
+    --dr-color-border-brand-default: var(--blue-500);
+    --dr-color-border-brand-accent: var(--blue-600);
+    --dr-color-border-danger: var(--danger-600);
+    --dr-color-border-danger-subtle: var(--danger-300);
+    --dr-color-border-success: var(--success-600);
+    --dr-color-border-success-subtle: var(--success-300);
+    --dr-color-border-warning: var(--warning-600);
+    --dr-color-border-warning-subtle: var(--warning-300);
+
+    --dr-color-border-form-input: var(--neutral-400);
+    --dr-color-border-form-select: var(--neutral-400);
+    --dr-color-border-form-checkbox-default: var(--neutral-400);
+    --dr-color-border-form-checkbox-selected: var(--blue-500);
+    --dr-color-border-form-radio-default: var(--neutral-400);
+    --dr-color-border-form-radio-selected: var(--blue-500);
+
+    --dr-color-border-danger-0: var(--alpha-danger-600-0);
+    --dr-color-border-danger-0: var(--alpha-danger-600-0);
+    --dr-color-border-danger-10: var(--alpha-danger-600-10);
+    --dr-color-border-danger-25: var(--alpha-danger-600-25);
+    --dr-color-border-danger-50: var(--alpha-danger-600-50);
+    --dr-color-border-blue: var(--blue-200);
+    --dr-color-border-blue-0: var(--alpha-blue-500-0);
+    --dr-color-border-inverse-0: var(--alpha-white-0);
+    --dr-color-border-inverse-50: var(--alpha-white-50);
+    --dr-color-border-grey-0: var(--alpha-grey-0);
+
+    /* Text Colors */
+    --dr-color-text-primary: var(--neutral-1100);
+    --dr-color-text-primary-inverse: var(--neutral-200);
+    --dr-color-text-secondary: var(--neutral-600);
+    --dr-color-text-subtle: var(--neutral-500);
+    --dr-color-text-brand: var(--blue-500);
+    --dr-color-text-header: var(--blue-900);
+    --dr-color-text-danger: var(--danger-600);
+    --dr-color-text-success: var(--success-600);
+    --dr-color-text-warning: var(--warning-600);
+
+    --dr-color-text-utility: var(--neutral-800);
+
+    --dr-color-text-link-default: var(--blue-500);
+    --dr-color-text-link-hover: var(--blue-300);
+
+    /* Border Radius */
+    --dr-radius-3x-small: var(--size-2px);
+    --dr-radius-2x-small: var(--size-4px);
+    --dr-radius-small: var(--size-8px);
+    --dr-radius-medium: var(--size-12px);
+    --dr-radius-large: var(--size-16px);
+    --dr-radius-extra-large: var(--size-24px);
+
+    /* Padding and Margins */
+    --dr-spacing-4x-small: var(--size-2px);
+    --dr-spacing-3x-small: var(--size-4px);
+    --dr-spacing-2x-small: var(--size-8px);
+    --dr-spacing-small: var(--size-12px);
+    --dr-spacing-medium: var(--size-16px);
+    --dr-spacing-large: var(--size-20px);
+    --dr-spacing-x-large: var(--size-24px);
+    --dr-spacing-2x-large: var(--size-28px);
+    --dr-spacing-3x-large: var(--size-36px);
+    --dr-spacing-4x-large: var(--size-40px);
+
+    /* Box Shadow */
+    --dr-elevation-100: var(--size-0) var(--size-0) var(--size-0) var(--size-0) var(--alpha-black-2);
+    --dr-elevation-200: var(--size-0) var(--size-4px) var(--size-16px) var(--size-0) var(--alpha-black-2);
+    --dr-elevation-300: var(--size-0) var(--size-8px) var(--size-16px) var(--size-0) var(--alpha-black-15);
+    --dr-elevation-400: var(--size-0) var(--size-12px) var(--size-20px) var(--size-0) var(--alpha-black-15);
+    --dr-elevation-500: var(--size-0) var(--size-12px) var(--size-20px) var(--size-0) var(--alpha-black-3);
+
+    /* ======= Semantic Type Variables ======= */
+    /* Font-Family */
+    --dr-font-family-header: var(--font-poppins);
+    --dr-font-family-content: var(--font-roboto);
+    /* Font Size */
+    --dr-font-size-extra-small: var(--size-12px);
+    --dr-font-size-small: var(--size-14px);
+    --dr-font-size-normal: var(--size-16px);
+    --dr-font-size-large: var(--size-18px);
+    --dr-font-size-header-small: var(--size-18px);
+    --dr-font-size-header-normal: var(--size-24px);
+    --dr-font-size-header-large: var(--size-32px);
+
+}
+
+/* Manual Toggle for Dark Mode. dark theme needs to equal True */
+body[data-dark-theme='true'] {}
+
+body {
+    background: var(--dr-color-background-primary);
+    font-family: var(--dr-font-family-content);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--dr-color-text-header);
+    font-family: var(--dr-font-family-header);
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin: 0;
+    padding: var(--dr-spacing-small) 0;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+h3 {
+    font-size: 1.125rem;
+}
+
+h4,
+h5,
+h6 {
+    font-size: 1rem;
+}
+
+body,
+p,
+ul,
+li,
+label,
+input,
+textarea {
+    font-family: var(--dr-font-family-content);
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: var(--dr-color-text-primary);
+}
+
+strong {
+    font-weight: 700;
+}

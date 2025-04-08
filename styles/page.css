@@ -1,0 +1,74 @@
+body {
+    background: var(--dr-color-background-primary);
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    top: 0;
+}
+
+#mainheader {
+    background-color: var(--dr-color-background-brand-accent);
+    color: white;
+}
+
+#subheader {
+    background-color: white;
+    border-bottom: 1px solid var(--dr-color-border-primary);
+}
+
+#mainheader,
+#subheader {
+    padding: var(--dr-spacing-medium);
+
+}
+
+/* Recommendation Icons */
+.no-sig-find {
+    color: var(--success-600);
+    background: var(--success-100);
+    height: 19px;
+    border-radius: 100px;
+}
+
+
+#macros {
+    background: white;
+    border-right: 1px solid var(--dr-color-border-primary);
+    max-width: 600px;
+    width: 100%;
+    height: auto;
+    padding: var(--dr-spacing-medium);
+}
+
+#builder-col {
+    padding: var(--dr-spacing-medium);
+}
+
+#builder-col .panel {
+    background: white;
+    border: 1px solid var(--dr-color-border-primary);
+    border-radius: 32px;
+    width: 100%;
+    padding: var(--dr-spacing-medium);
+}
+
+
+#textArea {
+    border: 1px solid var(--dr-color-border-primary);
+    border-radius: var(--dr-radius-medium);
+    padding: var(--dr-spacing-medium);
+    width: 100%;
+    font-size: 14px;
+}
+
+#textArea label {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.report-section {
+    width: 100%;
+}
