@@ -5,8 +5,9 @@ body {
 header {
     display: flex;
     flex-direction: column;
-    position: sticky;
+    position: fixed;
     top: 0;
+    width: 100%;
 }
 
 #mainheader {
@@ -33,25 +34,32 @@ header {
     border-radius: 100px;
 }
 
+#mainContent {
+    padding-top: 136px;
+}
 
 #macros {
     background: white;
     border-right: 1px solid var(--dr-color-border-primary);
     max-width: 600px;
     width: 100%;
-    height: auto;
     padding: var(--dr-spacing-medium);
+    height: 100vh;
+    overflow: auto;
 }
 
 #builder-col {
     padding: var(--dr-spacing-medium);
+    height: 100vh;
+    overflow-y: scroll;
 }
 
 #builder-col .panel {
     background: white;
     border: 1px solid var(--dr-color-border-primary);
-    border-radius: 32px;
+    border-radius: 16px;
     width: 100%;
+    /* height: auto; */
     padding: var(--dr-spacing-medium);
 }
 
