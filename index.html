@@ -64,28 +64,32 @@
                     <div class="d-flex flex-row justify-content-between width-100">
                         <h2>Macros</h2>
                     </div>
-                    <div id="maxillaMacros" class="d-flex flex-column gap-2">
+                    <div id="maxillaMacros" class="d-flex flex-column gap-2 macroSection">
                         <div><strong>Maxilla:</strong></div>
                         <div class="btn-row">
-                            <button class="btn dr-utility">Normal</button>
-                            <button class="btn dr-utility">Palatine Torus</button>
-                            <button class="btn dr-utility">Maxillary Torus/Osteoma</button>
-                            <button class="btn dr-utility">Nasopalatine Duct Dilation <i
-                                    class="bi bi-chevron-down"></i></button>
-                            <button class="btn dr-utility">Not Well Seen</button>
-                            <button class="btn dr-utility">Other</button>
+                            <button class="btn dr-utility active-macro" data-macro-name="Maxilla Normal">Normal</button>
+                            <button class="btn dr-utility" data-macro-name="Palatine Torus">Palatine Torus</button>
+                            <button class="btn dr-utility" data-macro-name="Maxillary Torus/Osteoma">Maxillary
+                                Torus/Osteoma</button>
+                            <button class="btn dr-utility" data-macro-name="Nasopalatine Duct Dilation">Nasopalatine
+                                Duct Dilation <i class="bi bi-chevron-down"></i></button>
+                            <button class="btn dr-utility" data-macro-name="Maxilla Not Well Seen">Not Well
+                                Seen</button>
+                            <button class="btn dr-utility" data-macro-name="Maxilla Other">Other</button>
                         </div>
                     </div>
-                    <div id="mandibleMacros" class="d-flex flex-column gap-2">
+                    <div id="mandibleMacros" class="d-flex flex-column gap-2 macroSection">
                         <div><strong>Mandible:</strong></div>
                         <div class="btn-row">
-                            <button class="btn dr-utility">Normal</button>
-                            <button class="btn dr-utility">Bone Island</button>
-                            <button class="btn dr-utility">Cemento-Osseous Dysplasia <i
-                                    class="bi bi-chevron-down"></i></button>
-                            <button class="btn dr-utility">Mandibular torus/tori</button>
-                            <button class="btn dr-utility">Not Well Seen</button>
-                            <button class="btn dr-utility">Other</button>
+                            <button class="btn dr-utility" data-macro-name="Mandible Normal">Normal</button>
+                            <button class="btn dr-utility" data-macro-name="Bone Island">Bone Island</button>
+                            <button class="btn dr-utility" data-macro-name="Cemento-Osseous Dysplasia">Cemento-Osseous
+                                Dysplasia <i class="bi bi-chevron-down"></i></button>
+                            <button class="btn dr-utility" data-macro-name="Mandibular Torus/Tori">Mandibular
+                                torus/tori</button>
+                            <button class="btn dr-utility" data-macro-name="Mandible Not Well Seen">Not Well
+                                Seen</button>
+                            <button class="btn dr-utility" data-macro-name="Mandible Other">Other</button>
                         </div>
                     </div>
                 </div>
@@ -105,7 +109,7 @@
                         <!-- Maxilla -->
                         <div class="d-flex flex-column">
                             <div class="label">Maxilla:</div>
-                            <div id="maxilla" contenteditable="true">
+                            <div id="maxilla" contenteditable="true" data-report-section="maxilla">
                                 No suspicious mass lesion. No evidence of expansile, lucent or sclerotic lesion. Bone
                                 cortex intact. Normal appearance of the nasopalatine foramen.
                             </div>
@@ -113,7 +117,7 @@
                         <!-- Mandible -->
                         <div class="d-flex flex-column">
                             <div class="label">Mandible:</div>
-                            <div id="mandible" contenteditable="true">
+                            <div id="mandible" contenteditable="true" data-report-section="mandible">
                                 No suspicious mass lesion. No evidence of expansile, lucent or sclerotic lesion. Bone
                                 cortex intact. No lesions involving body or ramus of mandible.
                             </div>
@@ -199,8 +203,8 @@
                 <div class="spacer"></div>
             </div>
         </div>
-
     </section>
+    <script src="/scripts/app.js"></script>
 </body>
 
 </html>
