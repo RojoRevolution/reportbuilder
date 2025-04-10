@@ -154,7 +154,7 @@
 .dr-utility,
 .btn:disabled.dr-utility {
     font-weight: 400;
-    font-size: 12px;
+    font-size: 14px;
     padding: var(--dr-spacing-3x-small) var(--dr-spacing-small);
     line-height: normal;
     /* text */
@@ -178,6 +178,7 @@
 
 .btn:disabled.dr-utility {
     opacity: .5;
+    --bs-btn-bg: var(--dr-color-background-button-utility-default);
 }
 
 .dr-utility.dr-blue {

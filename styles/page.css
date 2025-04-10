@@ -36,6 +36,8 @@ header {
 
 #mainContent {
     padding-top: 136px;
+    height: 100vh;
+    overflow-y: hidden;
 }
 
 #macros {
@@ -44,8 +46,13 @@ header {
     max-width: 600px;
     width: 100%;
     padding: var(--dr-spacing-medium);
-    height: 100vh;
-    overflow: auto;
+}
+
+.btn-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px;
 }
 
 #builder-col {
@@ -61,22 +68,45 @@ header {
     width: 100%;
     /* height: auto; */
     padding: var(--dr-spacing-medium);
+    margin-bottom: 20px;
 }
 
+#builder-col .panel .header {
+    display: flex;
+    flex-direction: row;
+    padding: 0 var(--dr-spacing-2x-small);
+}
 
 #textArea {
-    border: 1px solid var(--dr-color-border-primary);
-    border-radius: var(--dr-radius-medium);
-    padding: var(--dr-spacing-medium);
+    /* border: 1px solid var(--dr-color-border-primary); */
+    /* border-radius: var(--dr-radius-medium); */
+    padding: var(--dr-spacing-medium) 0;
     width: 100%;
-    font-size: 14px;
+    font-size: 16px;
 }
 
-#textArea label {
-    font-size: 14px;
+
+.label {
     font-weight: 700;
+    padding: 0 var(--dr-spacing-2x-small);
+}
+
+
+div[contentEditable="true"] {
+    padding: var(--dr-spacing-2x-small);
+    border-radius: var(--dr-radius-small);
+    /* min-height: 20px; */
+}
+
+div[contentEditable="true"]:hover {
+    background: var(--neutral-200);
+    transition: .5s;
 }
 
 .report-section {
     width: 100%;
+}
+
+.spacer {
+    min-height: 150px;
 }
