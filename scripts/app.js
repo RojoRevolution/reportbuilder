@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // const mandibleMacroButtons = document.getElementById('mandibleMacros').querySelectorAll('.dr-utility');;
     // const allMacroButtons = document.querySelectorAll('.dr-utility');
     const allReportSection = document.querySelectorAll('[data-report-section]');
+    let activeCount;
 
 
     console.log("Report Sections: ", allReportSection)
@@ -29,21 +30,27 @@ document.addEventListener("DOMContentLoaded", () => {
     getJsonData();
 
     // Functions sets the active class for macro buttons
-    clearActiveBtns = (macroSection, currentButton, activeStatus, multiSelect) => {
+    clearActiveBtns = (macroSection, currentButton, currentBtnName, activeStatus, multiSelect) => {
         // Local Variables for each macro section
-        let activeSection = document.getElementById(macroSection);
-        let sectionOtherBtn = activeSection.querySelector('[data-macro-name="Other"]');
+        let activeSection = document.querySelector(`[data-macro-section="${macroSection}"]`);
+        let sectionOtherBtn = activeSection.querySelector('[data-macro-name="other"]');
         let activeSectionCheckButtons = activeSection.querySelectorAll('[data-multi-select="true"]');
         let activeSectionRadioButtons = activeSection.querySelectorAll('[data-multi-select="false"]');
+        // let selectedMacroButton = activeSection.querySelectorAll(`[data-macro-name="${currentBtnName}]`);
+        let activeTextSection = document.querySelector(`[data-report-section="${macroSection}"]`);
+
         // Stores Active Number of Checkbox Buttons
-        let activeCount;
 
         // Removes all active single select buttons
-        removeAlRadiolActiveClasses = (activeSection) => {
+        removeAllRadiolActiveClasses = (activeSection) => {
             activeSection.forEach((btn) => {
                 btn.classList.remove("active-macro");
             });
         };
+
+        console.log(activeTextSection)
+        // console.log(jsonData[macroSection][currentBtnName].definition);
+
         //removes all active multi-select buttons
         removeAllCheckBoxActiveClasses = (activeSection) => {
             activeSection.forEach((btn) => {
@@ -54,15 +61,26 @@ document.addEventListener("DOMContentLoaded", () => {
         // Function checks how many multi select buttons are active
         checkActiveStatus = () => {
             activeCount = activeSection.querySelectorAll(".btn.dr-utility.active-macro").length;
-            console.log("Active Elements", activeCount)
         }
+
+        appendNewParagraph = () => {
+            let newParagaph = document.createElement('p');
+            newParagaph.setAttribute('data-macro-selected', currentBtnName);
+            newParagaph.innerHTML = jsonData[macroSection][currentBtnName].definition;
+            activeTextSection.appendChild(newParagaph);
+        }
+
         // If statements check if button is Multi-select, and the target buttons current status
         if (multiSelect === "false") {
             // This statement sets Single Select option to Active
             removeAllCheckBoxActiveClasses(activeSectionCheckButtons);
-            removeAlRadiolActiveClasses(activeSectionRadioButtons);
+            removeAllRadiolActiveClasses(activeSectionRadioButtons);
+            activeTextSection.innerHTML = "";
             // Set current target active Class
             currentButton.classList.add('active-macro');
+            appendNewParagraph();
+
+            // activeTextSection.appendChild(jsonData[macroSection][currentBtnName].definition)
             checkActiveStatus();
 
         }
@@ -71,7 +89,6 @@ document.addEventListener("DOMContentLoaded", () => {
             currentButton.classList.remove('active-macro');
             // sectionOtherBtn.classList.add('active-macro');
             checkActiveStatus();
-            console.log("Active Count: ", activeCount);
             // If zero multu select buttons are active, sets "Other" to active
             if (activeCount === 0) {
                 console.log("Active Count = 0")
@@ -83,35 +100,64 @@ document.addEventListener("DOMContentLoaded", () => {
             // This statement sets Active multi select buttons to Inactive
             console.log("if false")
             // If clicked button is Multi-Select - Remove active status only from single select buttons
-            removeAlRadiolActiveClasses(activeSectionRadioButtons)
+            removeAllRadiolActiveClasses(activeSectionRadioButtons)
             // Set current target active Class
             currentButton.classList.add('active-macro');
+            appendNewParagraph();
             checkActiveStatus()
         };
 
     }
 
     // Function sets the report text for the builder
-    setReportText = (macro) => {
-        switch (macro) {
-            case "Normal":
-                // Clear previous text
-                // clearMultiSelect('mandible')
-                sectionText = allReportSection[0].innerHTML;
-                console.log("Definition: ", jsonData.maxilla.normal.definition);
-                allReportSection[0].innerHTML = jsonData.maxilla.normal.definition;
-                break;
-            case "Palatine Torus":
-                // clearSingleSelect('mandible')
-                allReportSection[0].innerHTML = jsonData.maxilla.palatineTorus.definition;
-                break;
-            case "Maxillary Torus/Osteoma":
-                // clearSingleSelect('mandible')
-                allReportSection[0].innerHTML = jsonData.maxilla.maxillaryTorus.definition;
-                break;
-            default:
-                break;
+    setReportText = (section, macro, isMultiSelect) => {
+        let activeMacroSection = document.querySelector(`[data-macro-section="${macro}"]`);
+        let activeTextSection = document.querySelector(`[data-report-section="${section}"]`);
+        let macroButtonClicked = macro;
+        // let isBtnMultiSelect = isMultiSelect.getAttribute("[data-multi-select]");
+        console.log("Active Section: ", activeTextSection);
+        console.log("Macro Clicked: ", macroButtonClicked);
+        console.log("Is Multi Select? ", isMultiSelect);
+
+        clearSingleMacroText = () => {
+            activeTextSection
         }
+
+        clearMultiMacroText = () => {
+            activeTextSection.innerHTML = "";
+        }
+
+
+
+        if (isMultiSelect === false) {
+            activeTextSection.appendChild(jsonData.section.macro.definition)
+        } else if (isMultiSelect === true) {
+
+        }
+
+
+
+
+
+        // switch (section && macro) {
+        //     case "maxilla" && "normal":
+        //         // Clear previous text
+        //         // clearMultiSelect('mandible')
+        //         // sectionText = allReportSection[0].innerHTML;
+        //         console.log("Definition: ", jsonData.maxilla.normal.definition);
+        //         activeTextSection.innerHTML = jsonData.maxilla.normal.definition;
+        //         break;
+        //     case "maxilla" && "palatineTorus":
+        //         clearCurrentTextSection('mandible')
+        //         activeTextSection.appendChild(jsonData.maxilla.palatineTorus.definition);
+        //         break;
+        //     case "maxilla" && "maxillaryTorus":
+        //         clearSingleSelect('mandible')
+        //         activeTextSection.appendChild(jsonData.maxilla.maxillaryTorus.definition);
+        //         break;
+        //     default:
+        //         break;
+        // }
     };
 
 
@@ -121,16 +167,17 @@ document.addEventListener("DOMContentLoaded", () => {
             console.log("click");
             let currentBtnEl = btn.currentTarget;
             // Gets the macro button section
-            let currentBtnSection = btn.currentTarget.parentElement.parentElement.getAttribute("id");
+            let currentSection = btn.currentTarget.parentElement.parentElement.getAttribute("data-macro-section");
             // Gets attribute Macro Name
             let currentBtnName = btn.currentTarget.getAttribute("data-macro-name");
+            console.log("Current Section: ", currentSection)
+            console.log("Current Macro: ", currentBtnName)
             // Gets attribute data-multi-select
             let currentBtnType = btn.currentTarget.getAttribute("data-multi-select");
-            let btnClasses = btn.currentTarget.getAttribute("class");
             let currentlyActive = btn.currentTarget.classList.contains("active-macro");
 
-            clearActiveBtns(currentBtnSection, currentBtnEl, currentlyActive, currentBtnType)
-            setReportText(currentBtnName);
+            clearActiveBtns(currentSection, currentBtnEl, currentBtnName, currentlyActive, currentBtnType)
+            // setReportText(currentSection, currentBtnName, currentBtnType);
         })
     })
 
