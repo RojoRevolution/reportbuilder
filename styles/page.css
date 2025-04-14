@@ -110,3 +110,8 @@ div[contentEditable="true"]:hover {
 .spacer {
     min-height: 150px;
 }
+
+#textArea .additional-option {
+    font-weight: 700;
+    color: var(--danger-600);
+}

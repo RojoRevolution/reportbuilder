@@ -67,29 +67,42 @@
                     <div id="maxillaMacros" class="d-flex flex-column gap-2 macroSection">
                         <div><strong>Maxilla:</strong></div>
                         <div class="btn-row">
-                            <button class="btn dr-utility active-macro" data-macro-name="Maxilla Normal">Normal</button>
-                            <button class="btn dr-utility" data-macro-name="Palatine Torus">Palatine Torus</button>
-                            <button class="btn dr-utility" data-macro-name="Maxillary Torus/Osteoma">Maxillary
+                            <button class="btn dr-utility active-macro" data-macro-name="Normal"
+                                data-multi-select="false">Normal</button>
+                            <button class="btn dr-utility" data-macro-name="Palatine Torus"
+                                data-multi-select="true">Palatine
+                                Torus</button>
+                            <button class="btn dr-utility" data-macro-name="Maxillary Torus/Osteoma"
+                                data-multi-select="true">Maxillary
                                 Torus/Osteoma</button>
-                            <button class="btn dr-utility" data-macro-name="Nasopalatine Duct Dilation">Nasopalatine
+                            <button class="btn dr-utility" data-macro-name="Nasopalatine Duct Dilation"
+                                data-multi-select="true">Nasopalatine
                                 Duct Dilation <i class="bi bi-chevron-down"></i></button>
-                            <button class="btn dr-utility" data-macro-name="Maxilla Not Well Seen">Not Well
+                            <button class="btn dr-utility" data-macro-name="Not Well Seen" data-multi-select="false">Not
+                                Well
                                 Seen</button>
-                            <button class="btn dr-utility" data-macro-name="Maxilla Other">Other</button>
+                            <button class="btn dr-utility" data-macro-name="Other"
+                                data-multi-select="false">Other</button>
                         </div>
                     </div>
                     <div id="mandibleMacros" class="d-flex flex-column gap-2 macroSection">
                         <div><strong>Mandible:</strong></div>
                         <div class="btn-row">
-                            <button class="btn dr-utility" data-macro-name="Mandible Normal">Normal</button>
-                            <button class="btn dr-utility" data-macro-name="Bone Island">Bone Island</button>
-                            <button class="btn dr-utility" data-macro-name="Cemento-Osseous Dysplasia">Cemento-Osseous
+                            <button class="btn dr-utility" data-macro-name="Normal"
+                                data-multi-select="false">Normal</button>
+                            <button class="btn dr-utility" data-macro-name="Bone Island" data-multi-select="true">Bone
+                                Island</button>
+                            <button class="btn dr-utility" data-macro-name="Cemento-Osseous Dysplasia"
+                                data-multi-select="true">Cemento-Osseous
                                 Dysplasia <i class="bi bi-chevron-down"></i></button>
-                            <button class="btn dr-utility" data-macro-name="Mandibular Torus/Tori">Mandibular
+                            <button class="btn dr-utility" data-macro-name="Mandibular Torus/Tori"
+                                data-multi-select="true">Mandibular
                                 torus/tori</button>
-                            <button class="btn dr-utility" data-macro-name="Mandible Not Well Seen">Not Well
+                            <button class="btn dr-utility" data-macro-name="Not Well Seen" data-multi-select="false">Not
+                                Well
                                 Seen</button>
-                            <button class="btn dr-utility" data-macro-name="Mandible Other">Other</button>
+                            <button class="btn dr-utility" data-macro-name="Other"
+                                data-multi-select="false">Other</button>
                         </div>
                     </div>
                 </div>
@@ -125,7 +138,7 @@
                         <!-- Alveolar/Teeth -->
                         <div class="d-flex flex-column">
                             <div class="label">Alveolar/Teeth:</div>
-                            <div id="mandible" contenteditable="true">
+                            <div id="alveolar" contenteditable="true">
                                 No CT evidence of significant periapical lucencies or dental caries. The buccal and
                                 lingual cortices are intact.
                             </div>
@@ -133,7 +146,7 @@
                         <!-- Nasopharynx -->
                         <div class="d-flex flex-column">
                             <div class="label">Nasopharynx:</div>
-                            <div id="mandible" contenteditable="true">
+                            <div id="nasopahrynx" contenteditable="true">
                                 Unremarkable CT appearance of the nasopharynx. No evidence of mass lesion or abnormal
                                 effacement of the pharyngeal recesses or fossa of Rosenmuller.
                             </div>
@@ -141,7 +154,7 @@
                         <!-- Oropharynx/Airway: -->
                         <div class="d-flex flex-column">
                             <div class="label">Oropharynx/Airway:</div>
-                            <div id="mandible" contenteditable="true">
+                            <div id="oropharynx" contenteditable="true">
                                 No suspicious mass lesion or mass like structure within the visualized airway, within
                                 limitation of CBCT technique. The general volume of the palatine and lingual tonsils is
                                 within normal limits for age. Any localizing symptoms should prompt further workup with
@@ -151,7 +164,7 @@
                         <!-- Paranasal Sinuses:: -->
                         <div class="d-flex flex-column">
                             <div class="label">Paranasal Sinuses:</div>
-                            <div id="mandible" contenteditable="true">
+                            <div id="paranasalSinuses" contenteditable="true">
                                 Paranasal sinuses within the field of view are well pneumatized and clear. Patent sinus
                                 drainage pathways. No significant sinus mucosal thickening or mucus retention cysts. No
                                 significant nasal septal deviation or septal bone spur.
@@ -160,7 +173,7 @@
                         <!-- Skull Base & Temporal Bones -->
                         <div class="d-flex flex-column">
                             <div class="label">Skull Base & Temporal Bones:</div>
-                            <div id="mandible" contenteditable="true">
+                            <div id="skullBase" contenteditable="true">
                                 Unremarkable CT appearance of the clivus and petrooccipital fissure with no suspicious
                                 lucent or destructive lesion. Normal appearance of the sella turcica without evidence of
                                 suspicious expansile or erosive lesion.<br><br>
@@ -173,7 +186,7 @@
                         <!-- Temporomandibular Joints -->
                         <div class="d-flex flex-column">
                             <div class="label">Temporomandibular Jointss:</div>
-                            <div id="mandible" contenteditable="true">
+                            <div id="tmj" contenteditable="true">
                                 Normal CT appearance of the temporomandibular joint. The mandibular condyle demonstrates
                                 normal rounded morphology with no flattening or irregularity of the articular surface.
                                 No significant subchondral sclerosis or joint space narrowing. Normal appearance of the
@@ -183,7 +196,7 @@
                         <!-- Visualized Cervical Spine -->
                         <div class="d-flex flex-column">
                             <div class="label">Visualized Cervical Spine:</div>
-                            <div id="mandible" contenteditable="true">
+                            <div id="cervicalSpine" contenteditable="true">
                                 Normal appearance of the visualized cervical spine. The cervical vertebrae are normal in
                                 height and alignment. Normal appearance of the craniocervical junction and atlantodental
                                 joint.
