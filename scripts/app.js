@@ -30,45 +30,35 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Functions sets the active class for macro buttons
     clearActiveBtns = (macroSection, currentButton, activeStatus, multiSelect) => {
-        // console.log("Function parameters");
-        // console.log("===================");
-        // console.log("Section", macroSection);
-        // console.log("Current Button", currentButton);
-        // console.log("Target Active Status", activeStatus);
-        // console.log("Is Multi Select? ", multiSelect)
-
-
-
-
+        // Local Variables for each macro section
         let activeSection = document.getElementById(macroSection);
         let sectionOtherBtn = activeSection.querySelector('[data-macro-name="Other"]');
         let activeSectionCheckButtons = activeSection.querySelectorAll('[data-multi-select="true"]');
         let activeSectionRadioButtons = activeSection.querySelectorAll('[data-multi-select="false"]');
-        let currentActiveMultiSelectButtons = activeSection.querySelectorAll(".active-macro");
         // Stores Active Number of Checkbox Buttons
         let activeCount;
 
-
+        // Removes all active single select buttons
         removeAlRadiolActiveClasses = (activeSection) => {
             activeSection.forEach((btn) => {
                 btn.classList.remove("active-macro");
             });
         };
-
+        //removes all active multi-select buttons
         removeAllCheckBoxActiveClasses = (activeSection) => {
             activeSection.forEach((btn) => {
                 btn.classList.remove("active-macro");
             });
         };
 
-        // Check Active Status
+        // Function checks how many multi select buttons are active
         checkActiveStatus = () => {
             activeCount = activeSection.querySelectorAll(".btn.dr-utility.active-macro").length;
             console.log("Active Elements", activeCount)
         }
-
+        // If statements check if button is Multi-select, and the target buttons current status
         if (multiSelect === "false") {
-            // Remove all Active Classes
+            // This statement sets Single Select option to Active
             removeAllCheckBoxActiveClasses(activeSectionCheckButtons);
             removeAlRadiolActiveClasses(activeSectionRadioButtons);
             // Set current target active Class
@@ -76,19 +66,13 @@ document.addEventListener("DOMContentLoaded", () => {
             checkActiveStatus();
 
         }
-        // If Clicked Button is Multi Select
-        // if (multiSelect === "true" && activeStatus === true) {
-        //     // console.log("Active Count Prior to Class Change: ", activeCount);
-        //     // console.log("if more than one is active")
-
-        //     currentButton.classList.remove('active-macro');
-        //     checkActiveStatus();
-        // }
         else if (multiSelect === "true" && activeStatus === true) {
+            // This statement sets unactive Multi select buttons to active
             currentButton.classList.remove('active-macro');
             // sectionOtherBtn.classList.add('active-macro');
             checkActiveStatus();
             console.log("Active Count: ", activeCount);
+            // If zero multu select buttons are active, sets "Other" to active
             if (activeCount === 0) {
                 console.log("Active Count = 0")
                 console.log(sectionOtherBtn)
@@ -96,6 +80,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         }
         else if (multiSelect === "true" && activeStatus === false) {
+            // This statement sets Active multi select buttons to Inactive
             console.log("if false")
             // If clicked button is Multi-Select - Remove active status only from single select buttons
             removeAlRadiolActiveClasses(activeSectionRadioButtons)
@@ -103,16 +88,6 @@ document.addEventListener("DOMContentLoaded", () => {
             currentButton.classList.add('active-macro');
             checkActiveStatus()
         };
-
-        let activeCountEl = activeSection.querySelectorAll(".btn.dr-utility.active-macro").length;
-
-        // console.log("Active Elements", activeCountEl)
-
-
-
-
-        // if (currentButton.classList.contains("active-macro") && )
-
 
     }
 
@@ -154,17 +129,8 @@ document.addEventListener("DOMContentLoaded", () => {
             let btnClasses = btn.currentTarget.getAttribute("class");
             let currentlyActive = btn.currentTarget.classList.contains("active-macro");
 
-
-            console.log("OnClick Button Name: ", currentBtnName)
-            console.log("Is Currently Active: ", currentlyActive)
-
-
             clearActiveBtns(currentBtnSection, currentBtnEl, currentlyActive, currentBtnType)
             setReportText(currentBtnName);
-
-
-
-            // btn.currentTarget.classList.add('active-macro');
         })
     })
 
