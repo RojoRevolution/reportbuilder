@@ -169,6 +169,7 @@
     --bs-btn-border-color: var(--dr-color-border-primary);
     --bs-btn-hover-border-color: var(--dr-color-border-primary);
     --bs-btn-active-border-color: var(--dr-color-border-primary);
+    position: relative;
 }
 
 .btn:active.dr-utility {
@@ -282,6 +283,28 @@
 .btn:active.dr-table-btn,
 .btn:focus-visible.dr-table-btn {
     border: none;
+}
+
+.dr-utility>ul {
+    display: none;
+    position: absolute;
+    background: var(--dr-color-background-brand-accent);
+    color: white;
+    z-index: 2;
+    left: 0;
+    top: 26px;
+    border-radius: 8px;
+    width: 100%;
+    text-align: left;
+}
+
+.dr-utility>ul li {
+    padding: 16px;
+    color: white;
+}
+
+.dr-utility:hover>ul {
+    display: block;
 }
 
 .ellipsis {

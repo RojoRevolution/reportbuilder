@@ -5,23 +5,23 @@
             "impression": ""
         },
         "palatineTorus": {
-            "definition": "<p data-definition='palantine-torus'>Midline well corticated protrusion from the midline of the hard palate likely reflecting a palatine torus or osteoma. This is an incidental finding and does not result in significant oral airway effacement or suggest a source of obstruction.</p>",
+            "definition": "Midline well corticated protrusion from the midline of the hard palate likely reflecting a palatine torus or osteoma. This is an incidental finding and does not result in significant oral airway effacement or suggest a source of obstruction.<br><br>",
             "impression": ""
         },
         "maxillaryTorus": {
-            "definition": "<p>Well circumscribed exophytic sclerotic lesions arising from the maxillary <span class='additional-option'>[RIGHT/LEFT/BILATERAL]</span> cortex. These are compatible with maxillary tori or osteomas, and are incidental lesions of no significant clinical consequence.</p>",
+            "definition": "Well circumscribed exophytic sclerotic lesions arising from the maxillary <span class='additional-option'>[RIGHT/LEFT/BILATERAL]</span> cortex. These are compatible with maxillary tori or osteomas, and are incidental lesions of no significant clinical consequence.<br><br>",
             "impression": ""
         },
         "nasopalatineDuctDilation": {
-            "definition": "<p>Nasopalatine foramen is at or above the normal limits for size (> 6 mm in diameter). Although this can represent a normal variant for this patient, in the correct clinical setting a nasopalatine duct cyst could be present.</p>",
+            "definition": "Nasopalatine foramen is at or above the normal limits for size (> 6 mm in diameter). Although this can represent a normal variant for this patient, in the correct clinical setting a nasopalatine duct cyst could be present.<br><br>",
             "impression": "Enlarged nasopalatine foramen which is likely incidental but may suggest presence of a nasopalatine duct cyst. Would correlate with clinical symptoms and consider additional imaging with MRI or CT, and ENT follow up."
         },
         "notWellSeen": {
-            "definition": "<p>Not within the field of view or not well visualized by this study.</p>",
+            "definition": "Not within the field of view or not well visualized by this study.",
             "impression": ""
         },
-        "Other": {
-            "definition": "<p></p>",
+        "other": {
+            "definition": "",
             "impression": ""
         }
     }

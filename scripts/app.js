@@ -68,6 +68,23 @@ document.addEventListener("DOMContentLoaded", () => {
             newParagaph.setAttribute('data-macro-selected', currentBtnName);
             newParagaph.innerHTML = jsonData[macroSection][currentBtnName].definition;
             activeTextSection.appendChild(newParagaph);
+            console.log("Appended Paragraph: ", newParagaph)
+        }
+
+        removeSingleButtonMacroText = () => {
+            let activeSectionNormal = activeTextSection.querySelector('[data-macro-selected="normal"]');
+            let activeSectionNotWellSeen = activeTextSection.querySelector('[data-macro-selected="notWellSeen"]');
+            let activeSectionOther = activeTextSection.querySelector('[data-macro-selected="other"]');
+
+            if (activeSectionNormal) {
+                activeSectionNormal.remove()
+            }
+            if (activeSectionNotWellSeen) {
+                activeSectionNotWellSeen.remove()
+            }
+            if (activeSectionOther) {
+                activeSectionOther.remove()
+            }
         }
 
         // If statements check if button is Multi-select, and the target buttons current status
@@ -85,22 +102,26 @@ document.addEventListener("DOMContentLoaded", () => {
 
         }
         else if (multiSelect === "true" && activeStatus === true) {
-            // This statement sets unactive Multi select buttons to active
+            // This statement sets active Multi select buttons to Inactive
+            console.log('Set to Active');
             currentButton.classList.remove('active-macro');
-            // sectionOtherBtn.classList.add('active-macro');
+            removeSingleButtonMacroText();
             checkActiveStatus();
+            activeTextSection.querySelector(`[data-macro-selected=${currentBtnName}]`).remove();
             // If zero multu select buttons are active, sets "Other" to active
             if (activeCount === 0) {
                 console.log("Active Count = 0")
                 console.log(sectionOtherBtn)
-                sectionOtherBtn.classList.add("active-macro")
+                sectionOtherBtn.classList.add("active-macro");
             }
         }
         else if (multiSelect === "true" && activeStatus === false) {
-            // This statement sets Active multi select buttons to Inactive
-            console.log("if false")
+            // This statement sets inactive multi select buttons to active
+            console.log("Set to Inactive")
+            console.log("Current Button: ", currentBtnName)
             // If clicked button is Multi-Select - Remove active status only from single select buttons
-            removeAllRadiolActiveClasses(activeSectionRadioButtons)
+            removeAllRadiolActiveClasses(activeSectionRadioButtons);
+            removeSingleButtonMacroText();
             // Set current target active Class
             currentButton.classList.add('active-macro');
             appendNewParagraph();

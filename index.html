@@ -72,12 +72,18 @@
                             <button class="btn dr-utility" data-macro-name="palatineTorus"
                                 data-multi-select="true">Palatine
                                 Torus</button>
-                            <button class="btn dr-utility" data-macro-name="maxillaryTorus"
-                                data-multi-select="true">Maxillary
-                                Torus/Osteoma</button>
+                            <button class="btn dr-utility" data-macro-name="maxillaryTorus" data-multi-select="true"
+                                data-dropdown="true">Maxillary
+                                Torus/Osteoma<i class="bi bi-chevron-down"></i>
+                                <ul>
+                                    <li data-additional-option="right">Right</li>
+                                    <li data-additional-option="left">Left</li>
+                                    <li data-additional-option="bilateral">Bilateral</li>
+                                </ul>
+                            </button>
                             <button class="btn dr-utility" data-macro-name="nasopalatineDuctDilation"
                                 data-multi-select="true">Nasopalatine
-                                Duct Dilation <i class="bi bi-chevron-down"></i></button>
+                                Duct Dilation</button>
                             <button class="btn dr-utility" data-macro-name="notWellSeen" data-multi-select="false">Not
                                 Well
                                 Seen</button>
@@ -91,7 +97,7 @@
                         <div class="btn-row">
                             <button class="btn dr-utility" data-macro-name="normal"
                                 data-multi-select="false">Normal</button>
-                            <button class="btn dr-utility" data-macro-name="Bone Island" data-multi-select="true">Bone
+                            <button class="btn dr-utility" data-macro-name="boneIsland" data-multi-select="true">Bone
                                 Island</button>
                             <button class="btn dr-utility" data-macro-name="Cemento-Osseous Dysplasia"
                                 data-multi-select="true">Cemento-Osseous
@@ -124,8 +130,9 @@
                         <div class="d-flex flex-column">
                             <div class="label">Maxilla:</div>
                             <div id="maxilla" contenteditable="true" data-report-section="maxilla">
-                                No suspicious mass lesion. No evidence of expansile, lucent or sclerotic lesion. Bone
-                                cortex intact. Normal appearance of the nasopalatine foramen.
+                                <p data-macro-selected="normal">No suspicious mass lesion. No evidence of expansile,
+                                    lucent or sclerotic lesion. Bone
+                                    cortex intact. Normal appearance of the nasopalatine foramen.</p>
                             </div>
                         </div>
                         <!-- Mandible -->
