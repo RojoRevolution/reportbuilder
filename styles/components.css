@@ -285,40 +285,7 @@
     border: none;
 }
 
-.dr-utility>ul {
-    display: none;
-    position: absolute;
-    background: var(--dr-color-background-primary-inverse);
-    color: white;
-    z-index: 2;
-    left: 0;
-    top: 26px;
-    border-radius: 8px;
-    width: 100%;
-    text-align: left;
-    box-shadow: 0 12px 16px rgba(0, 0, 0, .35);
-}
 
-.dr-utility>ul li {
-    padding: 16px;
-    color: white;
-}
-
-.dr-utility>ul li:first-of-type {
-    border-radius: 8px 8px 0 0;
-}
-
-.dr-utility>ul li:last-of-type {
-    border-radius: 0 0 8px 8px;
-}
-
-.dr-utility:hover>ul {
-    display: block;
-}
-
-.dr-utility>ul li:hover {
-    background: var(--dr-color-background-brand);
-}
 
 .ellipsis {
     height: 32px;

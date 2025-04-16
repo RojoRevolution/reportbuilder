@@ -67,14 +67,22 @@
                     <div id="maxillaMacros" class="d-flex flex-column gap-2" data-macro-section="maxilla">
                         <div><strong>Maxilla:</strong></div>
                         <div class="btn-row">
-                            <button class="btn dr-utility active-macro" data-macro-name="normal"
-                                data-multi-select="false">Normal</button>
-                            <button class="btn dr-utility" data-macro-name="palatineTorus"
-                                data-multi-select="true">Palatine
-                                Torus</button>
-                            <button class="btn dr-utility" data-macro-name="maxillaryTorus" data-multi-select="true"
-                                data-dropdown="true">Maxillary
-                                Torus/Osteoma<i class="bi bi-chevron-down"></i>
+                            <div>
+                                <button class="btn dr-utility active-macro" data-macro-name="normal"
+                                    data-multi-select="false">Normal</button>
+                            </div>
+                            <div>
+                                <button class="btn dr-utility" data-macro-name="palatineTorus"
+                                    data-multi-select="true">Palatine
+                                    Torus</button>
+
+                            </div>
+                            <!-- Has Dropdown -->
+                            <div class="dropdown-container">
+                                <button class="btn dr-utility" data-macro-name="maxillaryTorus" data-multi-select="true"
+                                    data-dropdown="true">Maxillary
+                                    Torus/Osteoma<i class="bi bi-chevron-down"></i>
+                                </button>
                                 <ul>
                                     <li data-additional-option="right"><span class="option-icon"
                                             data-bracket-active="false"></span>Right
@@ -84,15 +92,22 @@
                                     <li data-additional-option="bilateral"><span class="option-icon"
                                             data-bracket-active="false"></span>Bilateral</li>
                                 </ul>
-                            </button>
-                            <button class="btn dr-utility" data-macro-name="nasopalatineDuctDilation"
-                                data-multi-select="true">Nasopalatine
-                                Duct Dilation</button>
-                            <button class="btn dr-utility" data-macro-name="notWellSeen" data-multi-select="false">Not
-                                Well
-                                Seen</button>
-                            <button class="btn dr-utility" data-macro-name="other"
-                                data-multi-select="false">Other</button>
+                            </div>
+                            <div>
+                                <button class="btn dr-utility" data-macro-name="nasopalatineDuctDilation"
+                                    data-multi-select="true">Nasopalatine
+                                    Duct Dilation</button>
+                            </div>
+                            <div>
+                                <button class="btn dr-utility" data-macro-name="notWellSeen"
+                                    data-multi-select="false">Not
+                                    Well
+                                    Seen</button>
+                            </div>
+                            <div>
+                                <button class="btn dr-utility" data-macro-name="other"
+                                    data-multi-select="false">Other</button>
+                            </div>
                         </div>
                     </div>
                     <div id="mandibleMacros" class="d-flex flex-column gap-2 macroSection"

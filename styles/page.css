@@ -119,3 +119,46 @@ div[contentEditable="true"]:hover {
 .option-icon {
     margin-right: 6px;
 }
+
+.dropdown-container {
+    position: relative;
+}
+
+.dropdown-container>ul {
+    height: 0;
+    overflow: hidden;
+    position: absolute;
+    background: var(--dr-color-background-primary-inverse);
+    color: white;
+    z-index: 2;
+    left: 0;
+    top: 26px;
+    border-radius: 8px;
+    width: 100%;
+    text-align: left;
+    box-shadow: 0 12px 16px rgba(0, 0, 0, .35);
+}
+
+.dropdown-container>ul li {
+    padding: 8px;
+    color: white;
+    font-size: 14px;
+}
+
+.dropdown-container>ul li:first-of-type {
+    border-radius: 8px 8px 0 0;
+}
+
+.dropdown-container>ul li:last-of-type {
+    border-radius: 0 0 8px 8px;
+}
+
+.dropdown-container:hover>ul {
+    height: auto;
+    overflow: auto;
+}
+
+.dropdown-container>ul li:hover {
+    background: var(--dr-color-background-brand);
+    cursor: pointer;
+}
