@@ -8,6 +8,17 @@ document.addEventListener("DOMContentLoaded", () => {
     // const mandibleMacroButtons = document.getElementById('mandibleMacros').querySelectorAll('.dr-utility');;
     // const allMacroButtons = document.querySelectorAll('.dr-utility');
     const allReportSection = document.querySelectorAll('[data-report-section]');
+
+    const additionalOptionCheckBox = document.querySelectorAll(`[data-bracket-active="false"]`);
+
+    setAdditionalOptionIcons = (activeSelectionStatus) => {
+
+        additionalOptionCheckBox.forEach((selection) => {
+            selection.innerHTML = '<i class="bi bi-circle-fill"></i>';
+        })
+    }
+
+
     let activeCount;
 
 
@@ -155,32 +166,10 @@ document.addEventListener("DOMContentLoaded", () => {
         } else if (isMultiSelect === true) {
 
         }
-
-
-
-
-
-        // switch (section && macro) {
-        //     case "maxilla" && "normal":
-        //         // Clear previous text
-        //         // clearMultiSelect('mandible')
-        //         // sectionText = allReportSection[0].innerHTML;
-        //         console.log("Definition: ", jsonData.maxilla.normal.definition);
-        //         activeTextSection.innerHTML = jsonData.maxilla.normal.definition;
-        //         break;
-        //     case "maxilla" && "palatineTorus":
-        //         clearCurrentTextSection('mandible')
-        //         activeTextSection.appendChild(jsonData.maxilla.palatineTorus.definition);
-        //         break;
-        //     case "maxilla" && "maxillaryTorus":
-        //         clearSingleSelect('mandible')
-        //         activeTextSection.appendChild(jsonData.maxilla.maxillaryTorus.definition);
-        //         break;
-        //     default:
-        //         break;
-        // }
     };
 
+
+    setAdditionalOptionIcons();
 
     // Event Listener for all Macro buttons
     allMacroButtons.forEach((button) => {

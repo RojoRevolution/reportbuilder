@@ -115,3 +115,7 @@ div[contentEditable="true"]:hover {
     font-weight: 700;
     color: var(--danger-600);
 }
+
+.option-icon {
+    margin-right: 6px;
+}
