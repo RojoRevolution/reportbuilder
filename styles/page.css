@@ -95,13 +95,22 @@ header {
 div[contentEditable="true"] {
     padding: var(--dr-spacing-2x-small);
     border-radius: var(--dr-radius-small);
-    /* min-height: 20px; */
+    min-height: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
 
-div[contentEditable="true"]:hover {
+.impression {
+    margin-top: 12px;
+    background: var(--dr-color-background-accent);
+    min-height: 40px;
+}
+
+/* div[contentEditable="true"]:hover {
     background: var(--neutral-200);
     transition: .5s;
-}
+} */
 
 .report-section {
     width: 100%;
@@ -151,6 +160,11 @@ div[contentEditable="true"]:hover {
 
 .dropdown-container>ul li:last-of-type {
     border-radius: 0 0 8px 8px;
+}
+
+.dropdown-container>ul li[data-option-active="true"] {
+    background: var(--dr-color-background-brand);
+
 }
 
 .dropdown-container:hover>ul {

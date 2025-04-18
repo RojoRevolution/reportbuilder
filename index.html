@@ -64,6 +64,7 @@
                     <div class="d-flex flex-row justify-content-between width-100">
                         <h2>Macros</h2>
                     </div>
+                    <!-- Maxilla Macros -->
                     <div id="maxillaMacros" class="d-flex flex-column gap-2" data-macro-section="maxilla">
                         <div><strong>Maxilla:</strong></div>
                         <div class="btn-row">
@@ -84,13 +85,12 @@
                                     Torus/Osteoma<i class="bi bi-chevron-down"></i>
                                 </button>
                                 <ul>
-                                    <li data-additional-option="right"><span class="option-icon"
-                                            data-bracket-active="false"></span>Right
-                                    </li>
-                                    <li data-additional-option="left"><span class="option-icon"
-                                            data-bracket-active="false"></span>Left</li>
-                                    <li data-additional-option="bilateral"><span class="option-icon"
-                                            data-bracket-active="false"></span>Bilateral</li>
+                                    <li data-additional-option="right" data-option-active="false"><span
+                                            class="option-icon" data-bracket-active="false"></span>Right</li>
+                                    <li data-additional-option="left" data-option-active="false"><span
+                                            class="option-icon" data-bracket-active="false"></span>Left</li>
+                                    <li data-additional-option="bilateral" data-option-active="false"><span
+                                            class="option-icon" data-bracket-active="false"></span>Bilateral</li>
                                 </ul>
                             </div>
                             <div>
@@ -110,27 +110,58 @@
                             </div>
                         </div>
                     </div>
-                    <div id="mandibleMacros" class="d-flex flex-column gap-2 macroSection"
-                        data-macro-section="mandible">
+                    <!-- Mandible Macros -->
+                    <div id="mandibleMacros" class="d-flex flex-column gap-2" data-macro-section="mandible">
                         <div><strong>Mandible:</strong></div>
                         <div class="btn-row">
-                            <button class="btn dr-utility" data-macro-name="normal"
-                                data-multi-select="false">Normal</button>
-                            <button class="btn dr-utility" data-macro-name="boneIsland" data-multi-select="true">Bone
-                                Island</button>
-                            <button class="btn dr-utility" data-macro-name="Cemento-Osseous Dysplasia"
-                                data-multi-select="true">Cemento-Osseous
-                                Dysplasia <i class="bi bi-chevron-down"></i></button>
-                            <button class="btn dr-utility" data-macro-name="Mandibular Torus/Tori"
-                                data-multi-select="true">Mandibular
-                                torus/tori</button>
-                            <button class="btn dr-utility" data-macro-name="Not Well Seen" data-multi-select="false">Not
-                                Well
-                                Seen</button>
-                            <button class="btn dr-utility" data-macro-name="other"
-                                data-multi-select="false">Other</button>
+                            <div>
+                                <button class="btn dr-utility active-macro" data-macro-name="normal"
+                                    data-multi-select="false">Normal</button>
+                            </div>
+                            <div class="dropdown-container">
+                                <button class="btn dr-utility" data-macro-name="Bone Island" data-multi-select="true"
+                                    data-dropdown="true">Bone Island <i class="bi bi-chevron-down"></i></button>
+                                <ul>
+                                    <li data-additional-option="right" data-option-active="false"><span
+                                            class="option-icon" data-bracket-active="false"></span>Right</li>
+                                    <li data-additional-option="left" data-option-active="false"><span
+                                            class="option-icon" data-bracket-active="false"></span>Left</li>
+                                    <li data-additional-option="bilateral" data-option-active="false"><span
+                                            class="option-icon" data-bracket-active="false"></span>Bilateral</li>
+                                </ul>
+                            </div>
+                            <div class="dropdown-container">
+                                <button class="btn dr-utility" data-macro-name="Cemento-Osseous Dysplasia"
+                                    data-multi-select="true" data-dropdown="true">Cemento-Osseous Dysplasia <i
+                                        class="bi bi-chevron-down"></i></button>
+                                <ul>
+                                    <li data-additional-option="right" data-option-active="false"><span
+                                            class="option-icon" data-bracket-active="false"></span>Right</li>
+                                    <li data-additional-option="left" data-option-active="false"><span
+                                            class="option-icon" data-bracket-active="false"></span>Left</li>
+                                    <li data-additional-option="bilateral" data-option-active="false"><span
+                                            class="option-icon" data-bracket-active="false"></span>Bilateral</li>
+                                </ul>
+                            </div>
+
+
+                            <div>
+                                <button class="btn dr-utility" data-macro-name="Mandibular Torus/Tori"
+                                    data-multi-select="true">Mandibular Torus/Tori</button>
+                            </div>
+                            <div>
+                                <button class="btn dr-utility" data-macro-name="notWellSeen"
+                                    data-multi-select="false">Not
+                                    Well
+                                    Seen</button>
+                            </div>
+                            <div>
+                                <button class="btn dr-utility" data-macro-name="other"
+                                    data-multi-select="false">Other</button>
+                            </div>
                         </div>
                     </div>
+
                 </div>
             </div>
             <!-- Report Builder -->
@@ -158,84 +189,118 @@
                         <div class="d-flex flex-column">
                             <div class="label">Mandible:</div>
                             <div id="mandible" contenteditable="true" data-report-section="mandible">
-                                No suspicious mass lesion. No evidence of expansile, lucent or sclerotic lesion. Bone
-                                cortex intact. No lesions involving body or ramus of mandible.
+                                <p data-macro-selected="normal">
+                                    No suspicious mass lesion. No evidence of expansile, lucent or sclerotic lesion.
+                                    Bone cortex intact. No lesions involving body or ramus of mandible.
+
+                                </p>
                             </div>
                         </div>
                         <!-- Alveolar/Teeth -->
                         <div class="d-flex flex-column">
                             <div class="label">Alveolar/Teeth:</div>
                             <div id="alveolar" contenteditable="true">
-                                No CT evidence of significant periapical lucencies or dental caries. The buccal and
-                                lingual cortices are intact.
+                                <p data-macro-selected="normal">
+                                    No CT evidence of significant periapical lucencies or dental caries. The buccal and
+                                    lingual cortices are intact.
+                                </p>
                             </div>
                         </div>
                         <!-- Nasopharynx -->
                         <div class="d-flex flex-column">
                             <div class="label">Nasopharynx:</div>
                             <div id="nasopahrynx" contenteditable="true">
-                                Unremarkable CT appearance of the nasopharynx. No evidence of mass lesion or abnormal
-                                effacement of the pharyngeal recesses or fossa of Rosenmuller.
+                                <p data-macro-selected="normal">
+                                    Unremarkable CT appearance of the nasopharynx. No evidence of mass lesion or
+                                    abnormal
+                                    effacement of the pharyngeal recesses or fossa of Rosenmuller.
+                                </p>
                             </div>
                         </div>
                         <!-- Oropharynx/Airway: -->
                         <div class="d-flex flex-column">
                             <div class="label">Oropharynx/Airway:</div>
                             <div id="oropharynx" contenteditable="true">
-                                No suspicious mass lesion or mass like structure within the visualized airway, within
-                                limitation of CBCT technique. The general volume of the palatine and lingual tonsils is
-                                within normal limits for age. Any localizing symptoms should prompt further workup with
-                                direct visualization, contrast enhanced CT, MRI and/or laryngoscopy.
+                                <p data-macro-selected="normal">
+                                    No suspicious mass lesion or mass like structure within the visualized airway,
+                                    within
+                                    limitation of CBCT technique. The general volume of the palatine and lingual tonsils
+                                    is
+                                    within normal limits for age. Any localizing symptoms should prompt further workup
+                                    with
+                                    direct visualization, contrast enhanced CT, MRI and/or laryngoscopy.
+                                </p>
                             </div>
                         </div>
                         <!-- Paranasal Sinuses:: -->
                         <div class="d-flex flex-column">
                             <div class="label">Paranasal Sinuses:</div>
                             <div id="paranasalSinuses" contenteditable="true">
-                                Paranasal sinuses within the field of view are well pneumatized and clear. Patent sinus
-                                drainage pathways. No significant sinus mucosal thickening or mucus retention cysts. No
-                                significant nasal septal deviation or septal bone spur.
+                                <p data-macro-selected="normal">
+                                    Paranasal sinuses within the field of view are well pneumatized and clear. Patent
+                                    sinus
+                                    drainage pathways. No significant sinus mucosal thickening or mucus retention cysts.
+                                    No
+                                    significant nasal septal deviation or septal bone spur.
+                                </p>
                             </div>
                         </div>
                         <!-- Skull Base & Temporal Bones -->
                         <div class="d-flex flex-column">
                             <div class="label">Skull Base & Temporal Bones:</div>
                             <div id="skullBase" contenteditable="true">
-                                Unremarkable CT appearance of the clivus and petrooccipital fissure with no suspicious
-                                lucent or destructive lesion. Normal appearance of the sella turcica without evidence of
-                                suspicious expansile or erosive lesion.<br><br>
-                                Visualized portions of the mastoid air cells and/or pneumatized petrous apices are
-                                clear.<br><br>
-                                Visualized portions of the external auditory canals, middle ears and inner ears are
-                                within normal limits.
+                                <p data-macro-selected="normal">
+                                    Unremarkable CT appearance of the clivus and petrooccipital fissure with no
+                                    suspicious
+                                    lucent or destructive lesion. Normal appearance of the sella turcica without
+                                    evidence of
+                                    suspicious expansile or erosive lesion.<br><br>
+                                    Visualized portions of the mastoid air cells and/or pneumatized petrous apices are
+                                    clear.<br><br>
+                                    Visualized portions of the external auditory canals, middle ears and inner ears are
+                                    within normal limits.
+                                </p>
                             </div>
                         </div>
                         <!-- Temporomandibular Joints -->
                         <div class="d-flex flex-column">
                             <div class="label">Temporomandibular Jointss:</div>
                             <div id="tmj" contenteditable="true">
-                                Normal CT appearance of the temporomandibular joint. The mandibular condyle demonstrates
-                                normal rounded morphology with no flattening or irregularity of the articular surface.
-                                No significant subchondral sclerosis or joint space narrowing. Normal appearance of the
-                                condylar fossa.
+                                <p data-macro-selected="normal">
+                                    Normal CT appearance of the temporomandibular joint. The mandibular condyle
+                                    demonstrates
+                                    normal rounded morphology with no flattening or irregularity of the articular
+                                    surface.
+                                    No significant subchondral sclerosis or joint space narrowing. Normal appearance of
+                                    the
+                                    condylar fossa.
+                                </p>
                             </div>
                         </div>
                         <!-- Visualized Cervical Spine -->
                         <div class="d-flex flex-column">
                             <div class="label">Visualized Cervical Spine:</div>
                             <div id="cervicalSpine" contenteditable="true">
-                                Normal appearance of the visualized cervical spine. The cervical vertebrae are normal in
-                                height and alignment. Normal appearance of the craniocervical junction and atlantodental
-                                joint.
+                                <p data-macro-selected="normal">
+                                    Normal appearance of the visualized cervical spine. The cervical vertebrae are
+                                    normal in
+                                    height and alignment. Normal appearance of the craniocervical junction and
+                                    atlantodental
+                                    joint.
+                                </p>
                             </div>
                         </div>
                         <!-- Salivary Glands, Lymph Nodes and Soft Tissues -->
                         <div class="d-flex flex-column">
                             <div class="label">Salivary Glands, Lymph Nodes and Soft Tissues:</div>
                             <div id="mandible" contenteditable="true">
-                                Limited evaluation of soft tissues and lowered sensitivity to detect pathology due to
-                                bone optimized CBCT technique. Within these limits, there is no gross abnormality of the
-                                visualized soft tissues and no appreciable mass lesion or lymphadenopathy.
+                                <p data-macro-selected="normal">
+                                    Limited evaluation of soft tissues and lowered sensitivity to detect pathology due
+                                    to
+                                    bone optimized CBCT technique. Within these limits, there is no gross abnormality of
+                                    the
+                                    visualized soft tissues and no appreciable mass lesion or lymphadenopathy.
+                                </p>
                             </div>
                         </div>
                     </div>

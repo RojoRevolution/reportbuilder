@@ -2,27 +2,101 @@
     "maxilla": {
         "normal": {
             "definition": "No suspicious mass lesion. No evidence of expansile, lucent or sclerotic lesion. Bone cortex intact. Normal appearance of the nasopalatine foramen.",
-            "impression": ""
+            "impression": "none"
         },
         "palatineTorus": {
-            "definition": "Midline well corticated protrusion from the midline of the hard palate likely reflecting a palatine torus or osteoma. This is an incidental finding and does not result in significant oral airway effacement or suggest a source of obstruction.<br><br>",
-            "impression": ""
+            "definition": "Midline well corticated protrusion from the midline of the hard palate likely reflecting a palatine torus or osteoma. This is an incidental finding and does not result in significant oral airway effacement or suggest a source of obstruction.",
+            "impression": "none"
         },
         "maxillaryTorus": {
-            "definition": "Well circumscribed exophytic sclerotic lesions arising from the maxillary <span class='additional-option'>[RIGHT/LEFT/BILATERAL]</span> cortex. These are compatible with maxillary tori or osteomas, and are incidental lesions of no significant clinical consequence.<br><br>",
-            "impression": ""
+            "definition": "Well circumscribed exophytic sclerotic lesions arising from the maxillary <span class='additional-option' data-macro-option='true'>[RIGHT/LEFT/BILATERAL]</span> cortex. These are compatible with maxillary tori or osteomas, and are incidental lesions of no significant clinical consequence.",
+            "impression": "none"
         },
         "nasopalatineDuctDilation": {
-            "definition": "Nasopalatine foramen is at or above the normal limits for size (> 6 mm in diameter). Although this can represent a normal variant for this patient, in the correct clinical setting a nasopalatine duct cyst could be present.<br><br>",
+            "definition": "Nasopalatine foramen is at or above the normal limits for size (> 6 mm in diameter). Although this can represent a normal variant for this patient, in the correct clinical setting a nasopalatine duct cyst could be present.",
             "impression": "Enlarged nasopalatine foramen which is likely incidental but may suggest presence of a nasopalatine duct cyst. Would correlate with clinical symptoms and consider additional imaging with MRI or CT, and ENT follow up."
         },
         "notWellSeen": {
             "definition": "Not within the field of view or not well visualized by this study.",
-            "impression": ""
+            "impression": "none"
         },
         "other": {
             "definition": "",
-            "impression": ""
+            "impression": "none"
+        }
+    },
+    "mandible": {
+        "normal": {
+            "definition": "No suspicious mass lesion. No evidence of expansile, lucent or sclerotic lesion. Bone cortex intact. No lesions involving body or ramus of mandible.",
+            "impression": "none"
+        },
+        "Bone Island": {
+            "definition": "Well circumscribed sclerotic lesion in the <span class='additional-option' data-macro-option='true'>[RIGHT/LEFT/BILATERAL]</span> mandible measuring approximately <span class='additional-option'>[SIZE]</span> mm. In the absence of a history of malignancy, this is likely a benign incidental finding and of no clinical consequence.",
+            "impression": "none"
+        },
+        "Cemento-Osseous Dysplasia": {
+            "definition": "Surrounding the apices of several teeth, there is a well circumscribed sclerotic lesion in the <span class='additional-option' data-macro-option='true'>[RIGHT/LEFT/BILATERAL]</span> mandible, measuring approximately <span class='additional-option'>[SIZE]</span> mm. In the absence of a history of malignancy or symptoms, this is likely cemento-osseous dysplasia, a benign incidental finding and of no clinical consequence.",
+            "impression": "none"
+        },
+        "Mandibular Torus/Tori": {
+            "definition": "Well circumscribed exophytic sclerotic lesions arising from the mandibular cortex bilaterally. These are compatible with mandibular tori or osteomas, and are incidental lesions of no significant clinical consequence.",
+            "impression": "none"
+        },
+        "notWellSeen": {
+            "definition": "Not within the field of view or not well visualized by this study.",
+            "impression": "none"
+        },
+        "other": {
+            "definition": "",
+            "impression": "none"
+        }
+    },
+    "alveolar": {
+        "normal": {
+            "definition": "No CT evidence of significant periapical lucencies or dental caries. The buccal and lingual cortices are intact.",
+            "impression": "none"
+        }
+    },
+    "nasopharynx": {
+        "normal": {
+            "definition": "Unremarkable CT appearance of the nasopharynx. No evidence of mass lesion or abnormal effacement of the pharyngeal recesses or fossa of Rosenmuller.",
+            "impression": "none"
+        }
+    },
+    "oropharynx": {
+        "normal": {
+            "definition": "No suspicious mass lesion or mass like structure within the visualized airway, within limitation of CBCT technique. The general volume of the palatine and lingual tonsils is within normal limits for age. Any localizing symptoms should prompt further workup with direct visualization, contrast enhanced CT, MRI and/or laryngoscopy.",
+            "impression": "none"
+        }
+    },
+    "paranasalSinuses": {
+        "normal": {
+            "definition": "Paranasal sinuses within the field of view are well pneumatized and clear. Patent sinus drainage pathways. No significant sinus mucosal thickening or mucus retention cysts. No significant nasal septal deviation or septal bone spur.",
+            "impression": "none"
+        }
+    },
+    "skullBase": {
+        "normal": {
+            "definition": "Unremarkable CT appearance of the nasopharynx. No evidence of mass lesion or abnormal effacement of the pharyngeal recesses or fossa of Rosenmuller.",
+            "impression": "none"
+        }
+    },
+    "tmj": {
+        "normal": {
+            "definition": "Normal CT appearance of the temporomandibular joint. The mandibular condyle demonstrates normal rounded morphology with no flattening or irregularity of the articular surface. No significant subchondral sclerosis or joint space narrowing. Normal appearance of the condylar fossa.",
+            "impression": "none"
+        }
+    },
+    "cervicalSpine": {
+        "normal": {
+            "definition": "Normal appearance of the visualized cervical spine. The cervical vertebrae are normal in height and alignment. Normal appearance of the craniocervical junction and atlantodental joint.",
+            "impression": "none"
+        }
+    },
+    "salivaryGlands": {
+        "normal": {
+            "definition": "Limited evaluation of soft tissues and lowered sensitivity to detect pathology due to bone optimized CBCT technique. Within these limits, there is no gross abnormality of the visualized soft tissues and no appreciable mass lesion or lymphadenopathy.",
+            "impression": "none"
         }
     }
 }
