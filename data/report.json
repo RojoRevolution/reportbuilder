@@ -55,6 +55,30 @@
         "normal": {
             "definition": "No CT evidence of significant periapical lucencies or dental caries. The buccal and lingual cortices are intact.",
             "impression": "none"
+        },
+        "Caries": {
+            "definition": "<span class='additional-option' data-macro-option='true'>[R/L MAXILLARY/MANDIBULAR]</span> dental lucencies consistent with caries or resorption. High resolution digital radiography including periapical and/or bite wing views should be considered for more definitive evaluation in the context of a comprehensive dental exam and any referable symptoms.",
+            "impression": "Dental lucency as described in the findings below consistent with caries or resorption. See discussion in findings below."
+        },
+        "Periapical Lucency": {
+            "definition": "<span class='additional-option' data-macro-option='true'>[R/L MAXILLARY/MANDIBULAR]</span> periapical lucency present, which is age indeterminate but can sometimes be associated with a non-vital tooth and/or pulp necrosis, or other infectious, inflammatory, or granulomatous reaction. Please consider in clinical context and correlate with clinical examination and pulp sensibility testing along with any referable signs or symptoms.",
+            "impression": "Periapical lucency present with potential implications as described in detail below. Would consider in clinical context."
+        },
+        "Radicular Cyst": {
+            "definition": "Periapical lucency along the roots of multiple contiguous teeth in the <span class='additional-option' data-macro-option='true'>[R/L MAXILLARY/MANDIBULAR]</span>, measuring approximately [SIZE] mm in maximum span. This is age indeterminate but can sometimes be associated with a non-vital tooth and/or pulp necrosis, or other infectious, inflammatory, or granulomatous reaction. Please consider in clinical context and correlate with clinical examination and pulp sensibility testing along with any referable signs or symptoms.",
+            "impression": "Radicular cyst present with potential implications as described in detail below. Would consider in clinical context."
+        },
+        "Edentulus": {
+            "definition": "There are no teeth present.",
+            "impression": "none"
+        },
+        "notWellSeen": {
+            "definition": "Not within the field of view or not well visualized by this study.",
+            "impression": "none"
+        },
+        "other": {
+            "definition": "",
+            "impression": "none"
         }
     },
     "nasopharynx": {
