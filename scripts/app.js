@@ -143,15 +143,15 @@ document.addEventListener("DOMContentLoaded", () => {
             bracketedTextSpan = activeTextSection.querySelector('span');
             let allImpressions = activeTextSectionParent.querySelectorAll('.impression');
             allImpressions.forEach((impression) => {
-                console.log("in Remove forEach")
+                console.log("in Remove forEach");
                 impression.remove();
-            })
+            });
             allDropDownOptions.forEach((option) => {
                 console.log("in Remove Option forEach");
                 let span = option.querySelector('span');
                 option.setAttribute('data-option-active', 'false');
-                span.innerHTML = additionalSelectionIcons[0]
-            })
+                span.innerHTML = additionalSelectionIcons[0];
+            });
             activeTextSection.appendChild(jsonData[macroSection][currentBtnName].definition)
             checkActiveStatus();
 
