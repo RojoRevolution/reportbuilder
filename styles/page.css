@@ -41,11 +41,17 @@ header {
 }
 
 #macros {
+    height: 100vh;
     background: white;
     border-right: 1px solid var(--dr-color-border-primary);
     max-width: 600px;
     width: 100%;
     padding: var(--dr-spacing-medium);
+    overflow-y: scroll;
+}
+
+#macros>div {
+    margin-bottom: 200px;
 }
 
 .btn-row {
@@ -99,12 +105,42 @@ div[contentEditable="true"] {
     display: flex;
     flex-direction: column;
     gap: 8px;
+
+}
+
+div[contentEditable="true"]:focus-visible {
+    box-shadow: 0 0 12px var(--alpha-blue-500-50);
+    outline: 1px solid var(--dr-color-border-brand-default);
+}
+
+.change-effect {
+    animation-name: quick-focus;
+    animation-duration: .25s;
+    animation-iteration-count: 1;
+}
+
+@keyframes quick-focus {
+    0% {
+        /* box-shadow: 0 0 0 var(--alpha-blue-500-50); */
+        transform: scale(1.01);
+    }
+
+    90% {
+        /* box-shadow: 0 0 20px var(--alpha-blue-500-75); */
+        transform: scale(.99);
+    }
+
+    100% {
+        /* box-shadow: 0 0 20px var(--alpha-blue-500-0); */
+        transform: scale(1);
+    }
 }
 
 .impression {
     margin-top: 12px;
     background: var(--dr-color-background-accent);
     min-height: 40px;
+    flex-direction: row !important;
 }
 
 /* div[contentEditable="true"]:hover {
@@ -143,6 +179,7 @@ div[contentEditable="true"] {
     left: 0;
     top: 26px;
     border-radius: 8px;
+    min-width: 160px;
     width: 100%;
     text-align: left;
     box-shadow: 0 12px 16px rgba(0, 0, 0, .35);

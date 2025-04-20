@@ -47,6 +47,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
     getJsonData();
 
+    contentChangeAnimation = (activeSection) => {
+        activeSection.classList.toggle('change-effect');
+        setTimeout(() => {
+            activeSection.classList.toggle('change-effect');
+        }, 1000)
+
+    }
+
     // Removes all active single select buttons
     removeAllRadiolActiveClasses = (activeSection) => {
         activeSection.forEach((btn) => {
@@ -77,17 +85,18 @@ document.addEventListener("DOMContentLoaded", () => {
         if (activeSectionOther) {
             activeSectionOther.remove()
         }
+
     }
 
     // Appends new <p> in report
     appendNewParagraph = (macroSection, currentButton, textSection) => {
         console.log(macroSection, currentButton, textSection)
-
         let newParagaph = document.createElement('p');
         newParagaph.setAttribute('data-macro-selected', currentButton);
         newParagaph.innerHTML = jsonData[macroSection][currentButton].definition;
         textSection.appendChild(newParagaph);
         // console.log("Appended Paragraph: ", newParagaph)
+        contentChangeAnimation(newParagaph);
     }
 
     appendImpression = (macroSection, currentButton, textSection) => {
@@ -99,13 +108,14 @@ document.addEventListener("DOMContentLoaded", () => {
         newDiv.setAttribute('contenteditable', 'true')
         newDiv.setAttribute('data-impression', currentButton)
         newDiv.innerHTML = impression;
-
         if (impression === "none") {
             console.log("No Impression");
         } else {
             parentDiv.appendChild(newDiv)
         }
     }
+
+
 
 
     // Functions sets the active class for macro buttons
@@ -118,13 +128,15 @@ document.addEventListener("DOMContentLoaded", () => {
         let activeSectionRadioButtons = activeSection.querySelectorAll('[data-multi-select="false"]');
         // let selectedMacroButton = activeSection.querySelectorAll(`[data-macro-name="${currentBtnName}]`);
         let activeTextSection = document.querySelector(`[data-report-section="${macroSection}"]`);
+        console.log("Macro Section: ", macroSection);
+        console.log("Active Text Section: ", activeTextSection);
         let activeTextSectionParent = activeTextSection.parentElement;
+        console.log("Active Text Section Parent: ", activeTextSectionParent);
 
 
         // Function checks how many multi select buttons are active
 
         checkActiveStatus = () => {
-            console.log(activeSection);
             activeCount = activeSection.querySelectorAll(".btn.dr-utility.active-macro").length;
         }
 
@@ -164,9 +176,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
             removeSingleButtonMacroText(activeTextSection);
             checkActiveStatus();
-            activeTextSection.querySelector(`[data-macro-selected=${currentBtnName}]`).remove();
+            activeTextSection.querySelector(`[data-macro-selected="${currentBtnName}"]`).remove();
 
-            // If zero multu select buttons are active, sets "Other" to active
+            // If zero multi select buttons are active, sets "Other" to active
             if (activeCount === 0) {
                 let allImpressions = activeTextSectionParent.querySelectorAll('.impression');
                 allImpressions.forEach((impression) => {
@@ -174,11 +186,15 @@ document.addEventListener("DOMContentLoaded", () => {
                     impression.remove();
                 })
                 sectionOtherBtn.classList.add("active-macro");
+                allDropDownOptions.forEach((option) => {
+                    console.log("in Remove Option forEach");
+                    let span = option.querySelector('span');
+                    option.setAttribute('data-option-active', 'false');
+                    span.innerHTML = additionalSelectionIcons[0];
+                });
             }
         }
         else if (multiSelect === "true" && activeStatus === false) {
-            console.log("Multi Select Button Active")
-
             // This statement sets inactive multi select buttons to active
             removeAllRadiolActiveClasses(activeSectionRadioButtons);
             removeSingleButtonMacroText(activeTextSection);
@@ -220,7 +236,6 @@ document.addEventListener("DOMContentLoaded", () => {
         checkActiveStatus = () => {
             console.log(activeSection);
             activeCount = activeSection.querySelectorAll(".btn.dr-utility.active-macro").length;
-            console.log("Active in Function ", activeCount)
         }
 
         // This will set the dropdown button to Active, add the macro text and change the bracketed text
@@ -241,6 +256,7 @@ document.addEventListener("DOMContentLoaded", () => {
             setDropDownOptionStatus(targetExtraOption, isOptionActive);
             let spanText = activeTextSection.querySelector('[data-macro-option="true"]');
             spanText.innerHTML = extraOptionValue;
+            contentChangeAnimation(spanText);
         }
     }
 
