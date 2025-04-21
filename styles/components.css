@@ -25,6 +25,7 @@
     --bs-btn-hover-border-color: var(--dr-color-border-brand-alpha-0);
     --bs-btn-active-border-color: var(--dr-color-border-brand-alpha-0);
     --bs-btn-disabled-border-color: var(--dr-color-background-blue-hover);
+    font-weight: 700;
 }
 
 .dr-btn-primary.danger {
@@ -83,6 +84,7 @@
     --bs-btn-hover-border-color: var(--dr-color-border-blue);
     --bs-btn-active-border-color: var(--dr-color-border-blue);
     --bs-btn-disabled-border-color: var(--dr-color-border-blue);
+    font-weight: 700;
 }
 
 .dr-btn-tertiary {
@@ -154,7 +156,7 @@
 .dr-utility,
 .btn:disabled.dr-utility {
     font-weight: 400;
-    font-size: 12px;
+    font-size: 14px;
     padding: var(--dr-spacing-3x-small) var(--dr-spacing-small);
     line-height: normal;
     /* text */
@@ -169,6 +171,7 @@
     --bs-btn-border-color: var(--dr-color-border-primary);
     --bs-btn-hover-border-color: var(--dr-color-border-primary);
     --bs-btn-active-border-color: var(--dr-color-border-primary);
+    position: relative;
 }
 
 .btn:active.dr-utility {
@@ -178,6 +181,21 @@
 
 .btn:disabled.dr-utility {
     opacity: .5;
+    --bs-btn-bg: var(--dr-color-background-button-utility-default);
+}
+
+.dr-utility.active-macro {
+    --bs-btn-color: white;
+    --bs-btn-hover-color: white;
+    --bs-btn-active-color: white;
+    /* background */
+    --bs-btn-bg: var(--blue-800);
+    --bs-btn-hover-bg: var(--blue-700);
+    --bs-btn-active-bg: var(--blue-600);
+    /* border */
+    --bs-btn-border-color: var(--dr-color-border-primary);
+    --bs-btn-hover-border-color: var(--dr-color-border-primary);
+    --bs-btn-active-border-color: var(--dr-color-border-primary);
 }
 
 .dr-utility.dr-blue {
@@ -268,6 +286,8 @@
 .btn:focus-visible.dr-table-btn {
     border: none;
 }
+
+
 
 .ellipsis {
     height: 32px;

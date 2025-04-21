@@ -27,7 +27,7 @@
     <header>
         <div id="mainheader" class="d-flex justify-content-between align-items-center">
             <div>
-                <a class="btn dr-btn-tertiary inverse">Exit Report Builder</a>
+                <a class="btn dr-btn-tertiary inverse">Close Study</a>
             </div>
             <div class="d-flex">
                 <div class="d-flex gap-2">
@@ -40,144 +40,762 @@
                 </div>
             </div>
             <div class="d-flex gap-2">
-                <a class="btn dr-btn-tertiary inverse">Preview Report</a>
-                <a class="btn dr-btn-primary">Click to Sign Report</a>
+                <a class="btn dr-btn-tertiary inverse">Preview</a>
+                <a class="btn dr-btn-primary">Sign Report</a>
 
             </div>
         </div>
         <div id="subheader" class="d-flex row">
             <div class="d-flex justify-content-between align-items-center">
-                <h2 class="d-flex">Patient Name</h2>
-                <div class="d-flex gap-2">
-                    <div class="no-sig-find"><i class="bi bi-check-circle"></i></div>
-                    No Significant Findings
+                <div class="d-flex align-items-center gap-3">
+                    <h2 class="d-flex">Montgomery Burns</h2>
+                    <div class="d-flex gap-3 study-info">
+                        <p><strong>Birthdate:</strong> Dec. 15, 1980 <i class="bi bi-chevron-down"></i></p>
+                        <div class="extra-info">
+                            <p><strong>Scan Date:</strong> Apr. 18, 2025</p>
+                            <p><strong>Referring Office:</strong> Apr. 18, 2025</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex gap-2 align-items-center">
+                    <label><strong>Recommendation:</strong></label>
+                    <select class="form-select" aria-label="Default select example">
+                        <option selected>No Significant Findings
+                        </option>
+                        <option value="1">Findings of Interest</option>
+                        <option value="2">Important</option>
+                        <option value="3">Critical</option>
+                    </select>
                 </div>
             </div>
         </div>
     </header>
     <!-- MAIN CONTENT -->
     <section id="mainContent">
-        <div class="d-flex flex-row">
-
-            <!-- Macros Section -->
+        <div class="d-flex">
+            <!-- Macros -->
             <div id="macros">
-                sdf
-            </div>
-            <!-- Report Builder Section -->
-            <div id="builder-col" class="d-flex flex-grow-1 justify-content-start">
-                <div class="d-flex flex-column panel gap-3">
-                    <div class="d-flex justify-content-between">
-                        <h3>Report Builder</h3>
-                        <div class="d-flex">
-                            <button class="btn dr-utility" disabled>Load Previous Session</button>
+                <div class="d-flex flex-column gap-3">
+                    <div class="d-flex flex-row justify-content-between width-100">
+                        <h2>Macros</h2>
+                    </div>
+                    <!-- Maxilla Macros -->
+                    <div class="d-flex flex-column gap-2" data-macro-section="maxilla">
+                        <div><strong>Maxilla:</strong></div>
+                        <div class="btn-row">
+                            <div>
+                                <button class="btn dr-utility active-macro" data-macro-name="normal"
+                                    data-multi-select="false">Normal</button>
+                            </div>
+                            <div>
+                                <button class="btn dr-utility" data-macro-name="palatineTorus"
+                                    data-multi-select="true">Palatine
+                                    Torus</button>
+
+                            </div>
+                            <!-- Has Dropdown -->
+                            <div class="dropdown-container">
+                                <button class="btn dr-utility" data-macro-name="maxillaryTorus" data-multi-select="true"
+                                    data-dropdown="true">Maxillary
+                                    Torus/Osteoma<i class="bi bi-chevron-down"></i>
+                                </button>
+                                <ul>
+                                    <li data-additional-option="right" data-option-active="false"><span
+                                            class="option-icon" data-bracket-active="false"></span>Right</li>
+                                    <li data-additional-option="left" data-option-active="false"><span
+                                            class="option-icon" data-bracket-active="false"></span>Left</li>
+                                    <li data-additional-option="bilateral" data-option-active="false"><span
+                                            class="option-icon" data-bracket-active="false"></span>Bilateral</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <button class="btn dr-utility" data-macro-name="nasopalatineDuctDilation"
+                                    data-multi-select="true">Nasopalatine
+                                    Duct Dilation</button>
+                            </div>
+                            <div>
+                                <button class="btn dr-utility" data-macro-name="notWellSeen"
+                                    data-multi-select="false">Not
+                                    Well
+                                    Seen</button>
+                            </div>
+                            <div>
+                                <button class="btn dr-utility" data-macro-name="other"
+                                    data-multi-select="false">Other</button>
+                            </div>
                         </div>
                     </div>
-                    <div class="d-flex">
-                        <div id="textArea" class="d-flex flex-column gap-4">
-                            <div id="artifact" class="report-section" contenteditable="true">
-                                No artifact detected
+                    <!-- Mandible Macros -->
+                    <div class="d-flex flex-column gap-2" data-macro-section="mandible">
+                        <div><strong>Mandible:</strong></div>
+                        <div class="btn-row">
+                            <div>
+                                <button class="btn dr-utility active-macro" data-macro-name="normal"
+                                    data-multi-select="false">Normal</button>
                             </div>
-                            <div class="d-flex flex-column">
-                                <label>Maxilla:</label>
-                                <div id="maxilla" class="report-section" contenteditable="true">
+                            <div class="dropdown-container">
+                                <button class="btn dr-utility" data-macro-name="Bone Island" data-multi-select="true"
+                                    data-dropdown="true">Bone Island <i class="bi bi-chevron-down"></i></button>
+                                <ul>
+                                    <li data-additional-option="right" data-option-active="false"><span
+                                            class="option-icon" data-bracket-active="false"></span>Right</li>
+                                    <li data-additional-option="left" data-option-active="false"><span
+                                            class="option-icon" data-bracket-active="false"></span>Left</li>
+                                    <li data-additional-option="bilateral" data-option-active="false"><span
+                                            class="option-icon" data-bracket-active="false"></span>Bilateral</li>
+                                </ul>
+                            </div>
+                            <div class="dropdown-container">
+                                <button class="btn dr-utility" data-macro-name="Cemento-Osseous Dysplasia"
+                                    data-multi-select="true" data-dropdown="true">Cemento-Osseous Dysplasia <i
+                                        class="bi bi-chevron-down"></i></button>
+                                <ul>
+                                    <li data-additional-option="right" data-option-active="false"><span
+                                            class="option-icon" data-bracket-active="false"></span>Right</li>
+                                    <li data-additional-option="left" data-option-active="false"><span
+                                            class="option-icon" data-bracket-active="false"></span>Left</li>
+                                    <li data-additional-option="bilateral" data-option-active="false"><span
+                                            class="option-icon" data-bracket-active="false"></span>Bilateral</li>
+                                </ul>
+                            </div>
+
+
+                            <div>
+                                <button class="btn dr-utility" data-macro-name="Mandibular Torus/Tori"
+                                    data-multi-select="true">Mandibular Torus/Tori</button>
+                            </div>
+                            <div>
+                                <button class="btn dr-utility" data-macro-name="notWellSeen"
+                                    data-multi-select="false">Not
+                                    Well
+                                    Seen</button>
+                            </div>
+                            <div>
+                                <button class="btn dr-utility" data-macro-name="other"
+                                    data-multi-select="false">Other</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Alveolar Macros -->
+                    <div class="d-flex flex-column gap-2" data-macro-section="alveolar">
+                        <div><strong>Alveolar/Teeth:</strong></div>
+                        <div class="btn-row">
+                            <div>
+                                <button class="btn dr-utility active-macro" data-macro-name="normal"
+                                    data-multi-select="false">Normal</button>
+                            </div>
+                            <div class="dropdown-container">
+                                <button class="btn dr-utility" data-macro-name="Caries" data-multi-select="true"
+                                    data-dropdown="true">Caries<i class="bi bi-chevron-down"></i></button>
+                                <ul>
+                                    <li data-additional-option="Right maxillary" data-option-active="false"><span
+                                            class="option-icon" data-bracket-active="false"></span>Right maxillar</li>
+                                    <li data-additional-option="Left maxillary" data-option-active="false"><span
+                                            class="option-icon" data-bracket-active="false"></span>Left Maxillar</li>
+                                    <li data-additional-option="Right mandibular" data-option-active="false"><span
+                                            class="option-icon" data-bracket-active="false"></span>Right mandibular</li>
+                                    <li data-additional-option="Left mandibular" data-option-active="false"><span
+                                            class="option-icon" data-bracket-active="false"></span>Left mandibular</li>
+                                </ul>
+                            </div>
+                            <div class="dropdown-container">
+                                <button class="btn dr-utility" data-macro-name="Periapical Lucency"
+                                    data-multi-select="true" data-dropdown="true">Periapical Lucency <i
+                                        class="bi bi-chevron-down"></i></button>
+                                <ul>
+                                    <li data-additional-option="Right maxillary" data-option-active="false"><span
+                                            class="option-icon" data-bracket-active="false"></span>Right maxillar</li>
+                                    <li data-additional-option="Left maxillary" data-option-active="false"><span
+                                            class="option-icon" data-bracket-active="false"></span>Left Maxillar</li>
+                                    <li data-additional-option="Right mandibular" data-option-active="false"><span
+                                            class="option-icon" data-bracket-active="false"></span>Right mandibular</li>
+                                    <li data-additional-option="Left mandibular" data-option-active="false"><span
+                                            class="option-icon" data-bracket-active="false"></span>Left mandibular</li>
+                                </ul>
+                            </div>
+                            <div class="dropdown-container">
+                                <button class="btn dr-utility" data-macro-name="Radicular Cyst" data-multi-select="true"
+                                    data-dropdown="true">Radicular Cyst <i class="bi bi-chevron-down"></i></button>
+                                <ul>
+                                    <li data-additional-option="Right maxillary" data-option-active="false"><span
+                                            class="option-icon" data-bracket-active="false"></span>Right maxillar</li>
+                                    <li data-additional-option="Left maxillary" data-option-active="false"><span
+                                            class="option-icon" data-bracket-active="false"></span>Left Maxillar</li>
+                                    <li data-additional-option="Right mandibular" data-option-active="false"><span
+                                            class="option-icon" data-bracket-active="false"></span>Right mandibular</li>
+                                    <li data-additional-option="Left mandibular" data-option-active="false"><span
+                                            class="option-icon" data-bracket-active="false"></span>Left mandibular</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <button class="btn dr-utility" data-macro-name="Edentulus"
+                                    data-multi-select="false">Edentulus</button>
+                            </div>
+                            <div>
+                                <button class="btn dr-utility" data-macro-name="notWellSeen"
+                                    data-multi-select="false">Not
+                                    Well
+                                    Seen</button>
+                            </div>
+                            <div>
+                                <button class="btn dr-utility" data-macro-name="other"
+                                    data-multi-select="false">Other</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Nasophraynx Macros -->
+                    <div class="d-flex flex-column gap-2" data-macro-section="nasopharynx">
+                        <div><strong>Nasopharynx:</strong></div>
+                        <div class="btn-row">
+                            <div>
+                                <button class="btn dr-utility active-macro" data-macro-name="normal"
+                                    data-multi-select="false">Normal</button>
+                            </div>
+                            <div>
+                                <button class="btn dr-utility" data-macro-name="Mild NP Prominence"
+                                    data-multi-select="true">Mild NP Prominence</button>
+
+                            </div>
+                            <div>
+                                <button class="btn dr-utility" data-macro-name="Tornwaldt Cyst"
+                                    data-multi-select="true">Tornwaldt Cyst</button>
+
+                            </div>
+                            <div>
+                                <button class="btn dr-utility" data-macro-name="notWellSeen"
+                                    data-multi-select="false">Not
+                                    Well
+                                    Seen</button>
+                            </div>
+                            <div>
+                                <button class="btn dr-utility" data-macro-name="other"
+                                    data-multi-select="false">Other</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Nasophraynx Macros -->
+                    <div class="d-flex flex-column gap-2" data-macro-section="oropharynx">
+                        <div><strong>Oropharynx/Airway:</strong></div>
+                        <div class="btn-row">
+                            <div>
+                                <button class="btn dr-utility active-macro" data-macro-name="normal"
+                                    data-multi-select="false">Normal</button>
+                            </div>
+                            <div>
+                                <button class="btn dr-utility" data-macro-name="Tonsillolith"
+                                    data-multi-select="true">Tonsillolith</button>
+                            </div>
+                            <div class="dropdown-container">
+                                <button class="btn dr-utility" data-macro-name="Airway Narrowing-Sleep Apnea"
+                                    data-multi-select="true" data-dropdown="true">Airway Narrowing-Sleep Apnea <i
+                                        class="bi bi-chevron-down"></i></button>
+                                <ul>
+                                    <li data-additional-option="100m2" data-option-active="false"><span
+                                            class="option-icon" data-bracket-active="false"></span> &lt; 100mm2</li>
+                                    <li data-additional-option="50mm2" data-option-active="false"><span
+                                            class="option-icon" data-bracket-active="false"></span>&lt; 50mm2</li>
+                                </ul>
+                            </div>
+                            <div class="dropdown-container">
+                                <button class="btn dr-utility" data-macro-name="Tonsilar Enlargement/Pharyngitis"
+                                    data-multi-select="true" data-dropdown="true">Tonsilar Enlargement/Pharyngitis <i
+                                        class="bi bi-chevron-down"></i></button>
+                                <ul>
+                                    <li data-additional-option="right" data-option-active="false"><span
+                                            class="option-icon" data-bracket-active="false"></span> Right</li>
+                                    <li data-additional-option="left" data-option-active="false"><span
+                                            class="option-icon" data-bracket-active="false"></span>Left</li>
+                                    <li data-additional-option="bilateral" data-option-active="false"><span
+                                            class="option-icon" data-bracket-active="false"></span>Bilateral</li>
+                                </ul>
+                            </div>
+                            <div class="dropdown-container">
+                                <button class="btn dr-utility" data-macro-name="Base of Tongue Fullness"
+                                    data-multi-select="true" data-dropdown="true">Base of Tongue Fullness <i
+                                        class="bi bi-chevron-down"></i></button>
+                                <ul>
+                                    <li data-additional-option="right" data-option-active="false"><span
+                                            class="option-icon" data-bracket-active="false"></span> Right</li>
+                                    <li data-additional-option="left" data-option-active="false"><span
+                                            class="option-icon" data-bracket-active="false"></span>Left</li>
+                                    <li data-additional-option="bilateral" data-option-active="false"><span
+                                            class="option-icon" data-bracket-active="false"></span>Bilateral</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <button class="btn dr-utility" data-macro-name="Floor of Mouth Calcifications"
+                                    data-multi-select="true">Floor of Mouth Calcifications</button>
+                            </div>
+                            <div>
+                                <button class="btn dr-utility" data-macro-name="notWellSeen"
+                                    data-multi-select="false">Not
+                                    Well
+                                    Seen</button>
+                            </div>
+                            <div>
+                                <button class="btn dr-utility" data-macro-name="other"
+                                    data-multi-select="false">Other</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Paranasal Macros -->
+                    <div class="d-flex flex-column gap-2" data-macro-section="paranasalSinuses">
+                        <div><strong>Paranasal Sinuses:</strong></div>
+                        <div class="btn-row">
+                            <div>
+                                <button class="btn dr-utility active-macro" data-macro-name="normal"
+                                    data-multi-select="false">Normal</button>
+                            </div>
+                            <div>
+                                <button class="btn dr-utility" data-macro-name="Mild" data-multi-select="true">Mild
+                                </button>
+                            </div>
+                            <div>
+                                <button class="btn dr-utility" data-macro-name="Mucus Retention Cyst"
+                                    data-multi-select="true">Mucus Retention Cyst
+                                </button>
+                            </div>
+                            <div>
+                                <button class="btn dr-utility" data-macro-name="Sinusitus"
+                                    data-multi-select="true">Sinusitus
+                                </button>
+                            </div>
+                            <div>
+                                <button class="btn dr-utility" data-macro-name="Maxillary Sinus Surgery"
+                                    data-multi-select="true">Maxillary Sinus Surgery
+                                </button>
+                            </div>
+                            <div>
+                                <button class="btn dr-utility" data-macro-name="Chronic Sinusitus"
+                                    data-multi-select="true">Chronic Sinusitus
+                                </button>
+                            </div>
+                            <div class="dropdown-container">
+                                <button class="btn dr-utility" data-macro-name="Osteomeatal/Middle Meatus Obstruction"
+                                    data-multi-select="true" data-dropdown="true">Osteomeatal/Middle Meatus Obstruction
+                                    <i class="bi bi-chevron-down"></i></button>
+                                <ul>
+                                    <li data-additional-option="right" data-option-active="false"><span
+                                            class="option-icon" data-bracket-active="false"></span> Right</li>
+                                    <li data-additional-option="left" data-option-active="false"><span
+                                            class="option-icon" data-bracket-active="false"></span>Left</li>
+                                    <li data-additional-option="bilateral" data-option-active="false"><span
+                                            class="option-icon" data-bracket-active="false"></span>Bilateral</li>
+                                </ul>
+                            </div>
+                            <div class="dropdown-container">
+                                <button class="btn dr-utility" data-macro-name="Septal Deviation"
+                                    data-multi-select="true" data-dropdown="true">Septal Deviation
+                                    <i class="bi bi-chevron-down"></i></button>
+                                <ul>
+                                    <li data-additional-option="Rightward" data-option-active="false"><span
+                                            class="option-icon" data-bracket-active="false"></span> Rightward</li>
+                                    <li data-additional-option="Leftward" data-option-active="false"><span
+                                            class="option-icon" data-bracket-active="false"></span>Leftward</li>
+                                    <li data-additional-option="Bilateral" data-option-active="false"><span
+                                            class="option-icon" data-bracket-active="false"></span>Bilateral</li>
+                                </ul>
+                            </div>
+                            <div class="dropdown-container">
+                                <button class="btn dr-utility" data-macro-name="Septal Deviation w/ Bone Spur"
+                                    data-multi-select="true" data-dropdown="true">Septal Deviation w/ Bone Spur
+                                    <i class="bi bi-chevron-down"></i></button>
+                                <ul>
+                                    <li data-additional-option="Rightward" data-option-active="false"><span
+                                            class="option-icon" data-bracket-active="false"></span> Rightward</li>
+                                    <li data-additional-option="Leftward" data-option-active="false"><span
+                                            class="option-icon" data-bracket-active="false"></span>Leftward</li>
+                                    <li data-additional-option="Bilateral" data-option-active="false"><span
+                                            class="option-icon" data-bracket-active="false"></span>Bilateral</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <button class="btn dr-utility" data-macro-name="Concha Bullosa"
+                                    data-multi-select="true">Concha Bullosa
+                                </button>
+                            </div>
+                            <div class="dropdown-container">
+                                <button class="btn dr-utility" data-macro-name="Inverted Papilloma"
+                                    data-multi-select="true" data-dropdown="true">Inverted Papilloma
+                                    <i class="bi bi-chevron-down"></i></button>
+                                <ul>
+                                    <li data-additional-option="right" data-option-active="false"><span
+                                            class="option-icon" data-bracket-active="false"></span> Right</li>
+                                    <li data-additional-option="left" data-option-active="false"><span
+                                            class="option-icon" data-bracket-active="false"></span>Left</li>
+                                    <li data-additional-option="bilateral" data-option-active="false"><span
+                                            class="option-icon" data-bracket-active="false"></span>Bilateral</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <button class="btn dr-utility" data-macro-name="notWellSeen"
+                                    data-multi-select="false">Not
+                                    Well
+                                    Seen</button>
+                            </div>
+                            <div>
+                                <button class="btn dr-utility" data-macro-name="other"
+                                    data-multi-select="false">Other</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Skull Base Macros -->
+                    <div class="d-flex flex-column gap-2" data-macro-section="skullBase">
+                        <div><strong>Skull Base & Temporal Bones:</strong></div>
+                        <div class="btn-row">
+                            <div>
+                                <button class="btn dr-utility active-macro" data-macro-name="normal"
+                                    data-multi-select="false">Normal</button>
+                            </div>
+                            <div>
+                                <button class="btn dr-utility" data-macro-name="Englarged Sella"
+                                    data-multi-select="true">Englarged Sella
+                                </button>
+                            </div>
+                            <div class="dropdown-container">
+                                <button class="btn dr-utility" data-macro-name="Cerumen" data-multi-select="true"
+                                    data-dropdown="true">Cerumen
+                                    <i class="bi bi-chevron-down"></i></button>
+                                <ul>
+                                    <li data-additional-option="right" data-option-active="false"><span
+                                            class="option-icon" data-bracket-active="false"></span> Right</li>
+                                    <li data-additional-option="left" data-option-active="false"><span
+                                            class="option-icon" data-bracket-active="false"></span>Left</li>
+                                    <li data-additional-option="bilateral" data-option-active="false"><span
+                                            class="option-icon" data-bracket-active="false"></span>Bilateral</li>
+                                </ul>
+                            </div>
+                            <div class="dropdown-container">
+                                <button class="btn dr-utility" data-macro-name="High Riding Jugular Bulb"
+                                    data-multi-select="true" data-dropdown="true">High Riding Jugular Bulb
+                                    <i class="bi bi-chevron-down"></i></button>
+                                <ul>
+                                    <li data-additional-option="right" data-option-active="false"><span
+                                            class="option-icon" data-bracket-active="false"></span> Right</li>
+                                    <li data-additional-option="left" data-option-active="false"><span
+                                            class="option-icon" data-bracket-active="false"></span>Left</li>
+                                    <li data-additional-option="bilateral" data-option-active="false"><span
+                                            class="option-icon" data-bracket-active="false"></span>Bilateral</li>
+                                </ul>
+                            </div>
+                            <div class="dropdown-container">
+                                <button class="btn dr-utility" data-macro-name="Otitis Externa" data-multi-select="true"
+                                    data-dropdown="true">Otitis Externa
+                                    <i class="bi bi-chevron-down"></i></button>
+                                <ul>
+                                    <li data-additional-option="right" data-option-active="false"><span
+                                            class="option-icon" data-bracket-active="false"></span> Right</li>
+                                    <li data-additional-option="left" data-option-active="false"><span
+                                            class="option-icon" data-bracket-active="false"></span>Left</li>
+                                    <li data-additional-option="bilateral" data-option-active="false"><span
+                                            class="option-icon" data-bracket-active="false"></span>Bilateral</li>
+                                </ul>
+                            </div>
+                            <div class="dropdown-container">
+                                <button class="btn dr-utility" data-macro-name="Mastoid Effusion"
+                                    data-multi-select="true" data-dropdown="true">Mastoid Effusion
+                                    <i class="bi bi-chevron-down"></i></button>
+                                <ul>
+                                    <li data-additional-option="right" data-option-active="false"><span
+                                            class="option-icon" data-bracket-active="false"></span> Right</li>
+                                    <li data-additional-option="left" data-option-active="false"><span
+                                            class="option-icon" data-bracket-active="false"></span>Left</li>
+                                    <li data-additional-option="bilateral" data-option-active="false"><span
+                                            class="option-icon" data-bracket-active="false"></span>Bilateral</li>
+                                </ul>
+                            </div>
+                            <div class="dropdown-container">
+                                <button class="btn dr-utility" data-macro-name="Middle Ear Effusion"
+                                    data-multi-select="true" data-dropdown="true">Middle Ear Effusion
+                                    <i class="bi bi-chevron-down"></i></button>
+                                <ul>
+                                    <li data-additional-option="right" data-option-active="false"><span
+                                            class="option-icon" data-bracket-active="false"></span> Right</li>
+                                    <li data-additional-option="left" data-option-active="false"><span
+                                            class="option-icon" data-bracket-active="false"></span>Left</li>
+                                    <li data-additional-option="bilateral" data-option-active="false"><span
+                                            class="option-icon" data-bracket-active="false"></span>Bilateral</li>
+                                </ul>
+                            </div>
+                            <div class="dropdown-container">
+                                <button class="btn dr-utility" data-macro-name="Cholesteatoma" data-multi-select="true"
+                                    data-dropdown="true">Cholesteatoma
+                                    <i class="bi bi-chevron-down"></i></button>
+                                <ul>
+                                    <li data-additional-option="right" data-option-active="false"><span
+                                            class="option-icon" data-bracket-active="false"></span> Right</li>
+                                    <li data-additional-option="left" data-option-active="false"><span
+                                            class="option-icon" data-bracket-active="false"></span>Left</li>
+                                    <li data-additional-option="bilateral" data-option-active="false"><span
+                                            class="option-icon" data-bracket-active="false"></span>Bilateral</li>
+                                </ul>
+                            </div>
+                            <div class="dropdown-container">
+                                <button class="btn dr-utility" data-macro-name="Elongation/Calcification of the Styloid"
+                                    data-multi-select="true" data-dropdown="true">Elongation/Calcification of the
+                                    Styloid
+                                    <i class="bi bi-chevron-down"></i></button>
+                                <ul>
+                                    <li data-additional-option="right" data-option-active="false"><span
+                                            class="option-icon" data-bracket-active="false"></span> Right</li>
+                                    <li data-additional-option="left" data-option-active="false"><span
+                                            class="option-icon" data-bracket-active="false"></span>Left</li>
+                                    <li data-additional-option="bilateral" data-option-active="false"><span
+                                            class="option-icon" data-bracket-active="false"></span>Bilateral</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <button class="btn dr-utility" data-macro-name="notWellSeen"
+                                    data-multi-select="false">Not
+                                    Well
+                                    Seen</button>
+                            </div>
+                            <div>
+                                <button class="btn dr-utility" data-macro-name="other"
+                                    data-multi-select="false">Other</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- TMJ Macros -->
+                    <div class="d-flex flex-column gap-2" data-macro-section="tmj">
+                        <div><strong>Temporomandibular Joints:</strong></div>
+                        <div class="btn-row">
+                            <div>
+                                <button class="btn dr-utility active-macro" data-macro-name="normal"
+                                    data-multi-select="false">Normal</button>
+                            </div>
+                            <div>
+                                <button class="btn dr-utility" data-macro-name="Mild"
+                                    data-multi-select="false">Mild</button>
+                            </div>
+                            <div>
+                                <button class="btn dr-utility" data-macro-name="Moderate"
+                                    data-multi-select="true">Moderate</button>
+                            </div>
+                            <div>
+                                <button class="btn dr-utility" data-macro-name="Severe"
+                                    data-multi-select="true">Severe</button>
+                            </div>
+                            <div>
+                                <button class="btn dr-utility" data-macro-name="notWellSeen"
+                                    data-multi-select="false">Not
+                                    Well
+                                    Seen</button>
+                            </div>
+                            <div>
+                                <button class="btn dr-utility" data-macro-name="other"
+                                    data-multi-select="false">Other</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Visualized Cervical Spine Macros -->
+                    <div class="d-flex flex-column gap-2" data-macro-section="cervicalSpine">
+                        <div><strong>Visualized Cervical Spine:</strong></div>
+                        <div class="btn-row">
+                            <div>
+                                <button class="btn dr-utility active-macro" data-macro-name="normal"
+                                    data-multi-select="false">Normal</button>
+                            </div>
+                            <div>
+                                <button class="btn dr-utility" data-macro-name="Atlantodental"
+                                    data-multi-select="false">Atlantodental</button>
+                            </div>
+                            <div>
+                                <button class="btn dr-utility" data-macro-name="C Spine DJD" data-multi-select="true">C
+                                    Spine DJD</button>
+                            </div>
+                            <div>
+                                <button class="btn dr-utility" data-macro-name="Fusion Hardware"
+                                    data-multi-select="true">Fusion Hardware</button>
+                            </div>
+                            <div>
+                                <button class="btn dr-utility" data-macro-name="OPLL"
+                                    data-multi-select="true">OPLL</button>
+                            </div>
+                            <div>
+                                <button class="btn dr-utility" data-macro-name="notWellSeen"
+                                    data-multi-select="false">Not
+                                    Well
+                                    Seen</button>
+                            </div>
+                            <div>
+                                <button class="btn dr-utility" data-macro-name="other"
+                                    data-multi-select="false">Other</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Visualized Cervical Spine Macros -->
+                    <div class="d-flex flex-column gap-2" data-macro-section="salivaryGlands">
+                        <div><strong>Salivary Glands, Lymph Nodes and Soft Tissues:</strong></div>
+                        <div class="btn-row">
+                            <div>
+                                <button class="btn dr-utility active-macro" data-macro-name="normal"
+                                    data-multi-select="false">Normal</button>
+                            </div>
+                            <div>
+                                <button class="btn dr-utility" data-macro-name="Carotid Plaque"
+                                    data-multi-select="true">Carotid Plaque</button>
+                            </div>
+                            <div>
+                                <button class="btn dr-utility" data-macro-name="notWellSeen"
+                                    data-multi-select="false">Not
+                                    Well
+                                    Seen</button>
+                            </div>
+                            <div>
+                                <button class="btn dr-utility" data-macro-name="other"
+                                    data-multi-select="false">Other</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Report Builder -->
+            <div id="builder-col">
+                <div class="panel d-flex flex-column gap-2">
+                    <!-- Header -->
+                    <div class="header justify-content-between width-100">
+                        <h2>Findings</h2>
+                        <div class="d-flex flex-column">
+                            <button href="" class="btn dr-utility" disabled>Load Previous Session</button>
+                        </div>
+                    </div>
+                    <!-- Report Builder Text Area -->
+                    <div id="textArea" class="d-flex flex-column gap-2">
+                        <!-- Maxilla -->
+                        <div class="d-flex flex-column">
+                            <div class="label">Maxilla:</div>
+                            <div id="maxilla" contenteditable="true" data-report-section="maxilla">
+                                <p data-macro-selected="normal">No suspicious mass lesion. No evidence of expansile,
+                                    lucent or sclerotic lesion. Bone
+                                    cortex intact. Normal appearance of the nasopalatine foramen.</p>
+                            </div>
+                        </div>
+                        <!-- Mandible -->
+                        <div class="d-flex flex-column">
+                            <div class="label">Mandible:</div>
+                            <div id="mandible" contenteditable="true" data-report-section="mandible">
+                                <p data-macro-selected="normal">
                                     No suspicious mass lesion. No evidence of expansile, lucent or sclerotic lesion.
-                                    Bone
-                                    cortex
-                                    intact. No lesions involving body or ramus of mandible.
-                                </div>
+                                    Bone cortex intact. No lesions involving body or ramus of mandible.
+
+                                </p>
                             </div>
-                            <div class="d-flex flex-column">
-                                <label>Mandible:</label>
-                                <div id="mandible" class="report-section" contenteditable="true">
-                                    No suspicious mass lesion. No evidence of expansile, lucent or sclerotic lesion.
-                                    Bone
-                                    cortex
-                                    intact. No lesions involving body or ramus of mandible. </div>
-                            </div>
-                            <div class="d-flex flex-column">
-                                <label>Alveolar/Teeth:</label>
-                                <div id="alveolar" class="report-section" contenteditable="true">
+                        </div>
+                        <!-- Alveolar/Teeth -->
+                        <div class="d-flex flex-column">
+                            <div class="label">Alveolar/Teeth:</div>
+                            <div id="alveolar" contenteditable="true" data-report-section="alveolar">
+                                <p data-macro-selected="normal">
                                     No CT evidence of significant periapical lucencies or dental caries. The buccal and
-                                    lingual
-                                    cortices are intact. </div>
+                                    lingual cortices are intact.
+                                </p>
                             </div>
-                            <div class="d-flex flex-column">
-                                <label>Nasopharynx:</label>
-                                <div id="nasopharynx" class="report-section" contenteditable="true">
+                        </div>
+                        <!-- Nasopharynx -->
+                        <div class="d-flex flex-column">
+                            <div class="label">Nasopharynx:</div>
+                            <div id="nasopahrynx" contenteditable="true" data-report-section="nasopharynx">
+                                <p data-macro-selected="normal">
                                     Unremarkable CT appearance of the nasopharynx. No evidence of mass lesion or
                                     abnormal
-                                    effacement of the pharyngeal recesses or fossa of Rosenmuller. </div>
+                                    effacement of the pharyngeal recesses or fossa of Rosenmuller.
+                                </p>
                             </div>
-                            <div class="d-flex flex-column">
-                                <label>Oropharynx/Airway:</label>
-                                <div id="oropharynx" class="report-section" contenteditable="true">
+                        </div>
+                        <!-- Oropharynx/Airway: -->
+                        <div class="d-flex flex-column">
+                            <div class="label">Oropharynx/Airway:</div>
+                            <div id="oropharynx" contenteditable="true" data-report-section="oropharynx">
+                                <p data-macro-selected="normal">
                                     No suspicious mass lesion or mass like structure within the visualized airway,
                                     within
                                     limitation of CBCT technique. The general volume of the palatine and lingual tonsils
                                     is
                                     within normal limits for age. Any localizing symptoms should prompt further workup
                                     with
-                                    direct visualization, contrast enhanced CT, MRI and/or laryngoscopy. </div>
+                                    direct visualization, contrast enhanced CT, MRI and/or laryngoscopy.
+                                </p>
                             </div>
-                            <div class="d-flex flex-column">
-                                <label>Paranasal Sinuses:</label>
-                                <div id="paranasal" class="report-section" contenteditable="true">
+                        </div>
+                        <!-- Paranasal Sinuses:: -->
+                        <div class="d-flex flex-column">
+                            <div class="label">Paranasal Sinuses:</div>
+                            <div id="paranasalSinuses" contenteditable="true" data-report-section="paranasalSinuses">
+                                <p data-macro-selected="normal">
                                     Paranasal sinuses within the field of view are well pneumatized and clear. Patent
                                     sinus
                                     drainage pathways. No significant sinus mucosal thickening or mucus retention cysts.
                                     No
-                                    significant nasal septal deviation or septal bone spur. </div>
+                                    significant nasal septal deviation or septal bone spur.
+                                </p>
                             </div>
-                            <div class="d-flex flex-column">
-                                <label>Skull Base and Temporal Bones:</label>
-                                <div id="skullbase" class="report-section" contenteditable="true">
+                        </div>
+                        <!-- Skull Base & Temporal Bones -->
+                        <div class="d-flex flex-column">
+                            <div class="label">Skull Base & Temporal Bones:</div>
+                            <div id="skullBase" contenteditable="true" data-report-section="skullBase">
+                                <p data-macro-selected="normal">
                                     Unremarkable CT appearance of the clivus and petrooccipital fissure with no
                                     suspicious
                                     lucent or destructive lesion. Normal appearance of the sella turcica without
                                     evidence of
-                                    suspicious expansile or erosive lesion.
+                                    suspicious expansile or erosive lesion.<br><br>
                                     Visualized portions of the mastoid air cells and/or pneumatized petrous apices are
-                                    clear.
+                                    clear.<br><br>
                                     Visualized portions of the external auditory canals, middle ears and inner ears are
-                                    within
-                                    normal limits. </div>
+                                    within normal limits.
+                                </p>
                             </div>
-                            <div class="d-flex flex-column">
-                                <label>Temporomadibular Joints:</label>
-                                <div id="tmj" class="report-section" contenteditable="true">
+                        </div>
+                        <!-- Temporomandibular Joints -->
+                        <div class="d-flex flex-column">
+                            <div class="label">Temporomandibular Jointss:</div>
+                            <div id="tmj" contenteditable="true" data-report-section="tmj">
+                                <p data-macro-selected="normal">
                                     Normal CT appearance of the temporomandibular joint. The mandibular condyle
                                     demonstrates
                                     normal rounded morphology with no flattening or irregularity of the articular
                                     surface.
-                                    No
-                                    significant subchondral sclerosis or joint space narrowing. Normal appearance of the
-                                    condylar fossa. </div>
+                                    No significant subchondral sclerosis or joint space narrowing. Normal appearance of
+                                    the
+                                    condylar fossa.
+                                </p>
                             </div>
-                            <div class="d-flex flex-column">
-                                <label>Visualized Cervical Spine:</label>
-                                <div id="cervical" class="report-section" contenteditable="true">
+                        </div>
+                        <!-- Visualized Cervical Spine -->
+                        <div class="d-flex flex-column">
+                            <div class="label">Visualized Cervical Spine:</div>
+                            <div id="cervicalSpine" contenteditable="true" data-report-section="cervicalSpine">
+                                <p data-macro-selected="normal">
                                     Normal appearance of the visualized cervical spine. The cervical vertebrae are
                                     normal in
                                     height and alignment. Normal appearance of the craniocervical junction and
                                     atlantodental
-                                    joint. </div>
+                                    joint.
+                                </p>
                             </div>
-                            <div class="d-flex flex-column">
-                                <label>Salivary Glands Lymph Nodes and Soft Tissues:</label>
-                                <div id="salivary" class="report-section" contenteditable="true">
+                        </div>
+                        <!-- Salivary Glands, Lymph Nodes and Soft Tissues -->
+                        <div class="d-flex flex-column">
+                            <div class="label">Salivary Glands, Lymph Nodes and Soft Tissues:</div>
+                            <div id="salivaryGlands" contenteditable="true" data-report-section="salivaryGlands">
+                                <p data-macro-selected="normal">
                                     Limited evaluation of soft tissues and lowered sensitivity to detect pathology due
                                     to
-                                    bone
-                                    optimized CBCT technique. Within these limits, there is no gross abnormality of the
-                                    visualized soft tissues and no appreciable mass lesion or lymphadenopathy. </div>
+                                    bone optimized CBCT technique. Within these limits, there is no gross abnormality of
+                                    the
+                                    visualized soft tissues and no appreciable mass lesion or lymphadenopathy.
+                                </p>
                             </div>
                         </div>
                     </div>
                 </div>
+                <div class="spacer"></div>
             </div>
         </div>
-
     </section>
+    <script src="/scripts/app.js"></script>
 </body>
 
 </html>

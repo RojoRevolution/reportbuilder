@@ -1,0 +1,314 @@
+{
+    "maxilla": {
+        "normal": {
+            "definition": "No suspicious mass lesion. No evidence of expansile, lucent or sclerotic lesion. Bone cortex intact. Normal appearance of the nasopalatine foramen.",
+            "impression": "none"
+        },
+        "palatineTorus": {
+            "definition": "Midline well corticated protrusion from the midline of the hard palate likely reflecting a palatine torus or osteoma. This is an incidental finding and does not result in significant oral airway effacement or suggest a source of obstruction.",
+            "impression": "none"
+        },
+        "maxillaryTorus": {
+            "definition": "Well circumscribed exophytic sclerotic lesions arising from the maxillary <span class='additional-option' data-macro-option='true'>[RIGHT/LEFT/BILATERAL]</span> cortex. These are compatible with maxillary tori or osteomas, and are incidental lesions of no significant clinical consequence.",
+            "impression": "none"
+        },
+        "nasopalatineDuctDilation": {
+            "definition": "Nasopalatine foramen is at or above the normal limits for size (> 6 mm in diameter). Although this can represent a normal variant for this patient, in the correct clinical setting a nasopalatine duct cyst could be present.",
+            "impression": "<strong>Impression:</strong> Enlarged nasopalatine foramen which is likely incidental but may suggest presence of a nasopalatine duct cyst. Would correlate with clinical symptoms and consider additional imaging with MRI or CT, and ENT follow up."
+        },
+        "notWellSeen": {
+            "definition": "Not within the field of view or not well visualized by this study.",
+            "impression": "none"
+        },
+        "other": {
+            "definition": "",
+            "impression": "none"
+        }
+    },
+    "mandible": {
+        "normal": {
+            "definition": "No suspicious mass lesion. No evidence of expansile, lucent or sclerotic lesion. Bone cortex intact. No lesions involving body or ramus of mandible.",
+            "impression": "none"
+        },
+        "Bone Island": {
+            "definition": "Well circumscribed sclerotic lesion in the <span class='additional-option' data-macro-option='true'>[RIGHT/LEFT/BILATERAL]</span> mandible measuring approximately <span class='additional-option'>[SIZE]</span> mm. In the absence of a history of malignancy, this is likely a benign incidental finding and of no clinical consequence.",
+            "impression": "none"
+        },
+        "Cemento-Osseous Dysplasia": {
+            "definition": "Surrounding the apices of several teeth, there is a well circumscribed sclerotic lesion in the <span class='additional-option' data-macro-option='true'>[RIGHT/LEFT/BILATERAL]</span> mandible, measuring approximately <span class='additional-option'>[SIZE]</span> mm. In the absence of a history of malignancy or symptoms, this is likely cemento-osseous dysplasia, a benign incidental finding and of no clinical consequence.",
+            "impression": "none"
+        },
+        "Mandibular Torus/Tori": {
+            "definition": "Well circumscribed exophytic sclerotic lesions arising from the mandibular cortex bilaterally. These are compatible with mandibular tori or osteomas, and are incidental lesions of no significant clinical consequence.",
+            "impression": "none"
+        },
+        "notWellSeen": {
+            "definition": "Not within the field of view or not well visualized by this study.",
+            "impression": "none"
+        },
+        "other": {
+            "definition": "",
+            "impression": "none"
+        }
+    },
+    "alveolar": {
+        "normal": {
+            "definition": "No CT evidence of significant periapical lucencies or dental caries. The buccal and lingual cortices are intact.",
+            "impression": "none"
+        },
+        "Caries": {
+            "definition": "<span class='additional-option' data-macro-option='true'>[R/L MAXILLARY/MANDIBULAR]</span> dental lucencies consistent with caries or resorption. High resolution digital radiography including periapical and/or bite wing views should be considered for more definitive evaluation in the context of a comprehensive dental exam and any referable symptoms.",
+            "impression": "<strong>Impression:</strong> Dental lucency as described in the findings consistent with caries or resorption. See discussion in findings."
+        },
+        "Periapical Lucency": {
+            "definition": "<span class='additional-option' data-macro-option='true'>[R/L MAXILLARY/MANDIBULAR]</span> periapical lucency present, which is age indeterminate but can sometimes be associated with a non-vital tooth and/or pulp necrosis, or other infectious, inflammatory, or granulomatous reaction. Please consider in clinical context and correlate with clinical examination and pulp sensibility testing along with any referable signs or symptoms.",
+            "impression": "<strong>Impression:</strong> Periapical lucency present with potential implications as described in detail. Would consider in clinical context."
+        },
+        "Radicular Cyst": {
+            "definition": "Periapical lucency along the roots of multiple contiguous teeth in the <span class='additional-option' data-macro-option='true'>[R/L MAXILLARY/MANDIBULAR]</span>, measuring approximately [SIZE] mm in maximum span. This is age indeterminate but can sometimes be associated with a non-vital tooth and/or pulp necrosis, or other infectious, inflammatory, or granulomatous reaction. Please consider in clinical context and correlate with clinical examination and pulp sensibility testing along with any referable signs or symptoms.",
+            "impression": "<strong>Impression:</strong> Radicular cyst present with potential implications as described in detail. Would consider in clinical context."
+        },
+        "Edentulus": {
+            "definition": "There are no teeth present.",
+            "impression": "none"
+        },
+        "notWellSeen": {
+            "definition": "Not within the field of view or not well visualized by this study.",
+            "impression": "none"
+        },
+        "other": {
+            "definition": "",
+            "impression": "none"
+        }
+    },
+    "nasopharynx": {
+        "normal": {
+            "definition": "Unremarkable CT appearance of the nasopharynx. No evidence of mass lesion or abnormal effacement of the pharyngeal recesses or fossa of Rosenmuller.",
+            "impression": "none"
+        },
+        "Mild NP Prominence": {
+            "definition": "Mild symmetric prominence of the posterior nasopharyngeal soft tissues, most often incidental to benign lymphoid tissue, especially in younger patients. Direct visualization could be considered as follow up if there are any risk factors or referable symptoms.",
+            "impression": "none"
+        },
+        "Tornwaldt Cyst": {
+            "definition": "<span class='additional-option'>[MAX SIZE]</span> mm well circumscribed cystic structure positioned at/near midline of the nasopharynx nestled between and anterior to the longus colli muscles. This likely represents a benign notochordal remnant known as a Tornwaldt cyst. No definite evidence of associated significant airway obstruction or mass effect on adjacent structures.",
+            "impression": "<strong>Impression:</strong> Likely Tornwaldt cyst in the nasopharynx, as described in findings. Correlate with history of halitosis or periodic discharge of foul tasting fluid into the mouth. Correlate with history of eustachian tube dysfunction. Consider ENT follow up."
+        },
+        "notWellSeen": {
+            "definition": "Not within the field of view or not well visualized by this study.",
+            "impression": "none"
+        },
+        "other": {
+            "definition": "",
+            "impression": "none"
+        }
+    },
+    "oropharynx": {
+        "normal": {
+            "definition": "No suspicious mass lesion or mass like structure within the visualized airway, within limitation of CBCT technique. The general volume of the palatine and lingual tonsils is within normal limits for age. Any localizing symptoms should prompt further workup with direct visualization, contrast enhanced CT, MRI and/or laryngoscopy.",
+            "impression": "none"
+        },
+        "Tonsillolith": {
+            "definition": "Tiny calcific densities in the palatine tonsils consistent with tonsilloliths. This is most often an incidental and subclinical finding. However, if patient has referable symptoms or a history of recurrent tonsillitis, referral to ENT could be considered.",
+            "impression": "none"
+        },
+        "Airway Narrowing-Sleep Apnea": {
+            "definition": "Smaller than expected caliber of the oral airway due to mild diffuse enlargement of the oropharyngeal soft tissues, with the approximate minimum cross-sectional area in the oropharyngeal airway measuring less than <span class='additional-option' data-macro-option='true'>[100mm2, 50mm2]</span>. Some of this narrowing may be related to the phase of respiration and/or patient positioning. Correlate with respiratory symptoms and evidence for sleep apnea.<br><br> No suspicious mass lesion or mass like structure within the visualized airway, within limitation of CBCT technique.",
+            "impression": "none"
+        },
+        "Tonsilar Enlargement/Pharyngitis": {
+            "definition": "Mildly enlarged <span class='additional-option' data-macro-option='true'>[RIGHT/LEFT/BILATERAL]</span> oropharyngeal tonsils. Appearance may reflect pharyngitis and/or reactive changes. No focal fluid to suggest underlying abscess. Any localizing symptoms could indicate need for further workup with direct visualization, contrast enhanced CT, MRI and/or laryngoscopy.",
+            "impression": "<strong>Impression:</strong> Oropharyngeal tonsillar enlargement, as described. Correlate with history of pharyngitis and/or localizing symptoms. Consider Primary care and/or ENT follow up. Additional imaging with CT or MRI could be considered."
+        },
+        "Base of Tongue Fullness": {
+            "definition": "Asymmetric soft tissue fullness in the <span class='additional-option' data-macro-option='true'>[RIGHT/LEFT/BILATERAL]</span> base of tongue/oropharyngeal tonsil. Although this could reflect asymmetric positioning, a focal neoplastic lesion at this site is not excluded. Correlate with direct visual inspection, clinical history and malignancy risk factors. No significant airway narrowing.",
+            "impression": "<strong>Impression:</strong> Asymmetry of the base of tongue soft tissues that is greater than expected, as described. No associated lymphadenopathy visualized. Correlate with direct visual inspection and malignancy risk factors. Consider ENT follow up and/or dedicated imaging with CT or MRI."
+        },
+        "Floor of Mouth Calcifications": {
+            "definition": "Well circumscribed calcifications measuring up to <span class='additional-option'>[SIZE]</span> mm, likely within the floor of mouth soft tissues. No definite evidence of salivary gland duct dilation to suggest ductal stone. No suspicious mass lesion or mass like structure within limitation of CBCT technique. Any localizing symptoms should prompt further workup with direct visualization and contrast enhanced CT or MR.",
+            "impression": "<strong>Impression:</strong> Likely incidental floor of mouth calcifications, as described. Salivary ductal stone is considered less likely but not completely excluded. Consider ENT follow up in the presence of corresponding clinical symptoms."
+        },
+        "notWellSeen": {
+            "definition": "Not within the field of view or not well visualized by this study.",
+            "impression": "none"
+        },
+        "other": {
+            "definition": "",
+            "impression": "none"
+        }
+    },
+    "paranasalSinuses": {
+        "normal": {
+            "definition": "Mild mucosal thickening of the paranasal sinuses without layering fluid level or aerated secretions. This type of mucosal thickening is often congestive in etiology and subclinical, however a low level inflammatory etiology can appear similar. Would correlate with any referable symptoms.",
+            "impression": "none"
+        },
+        "Mild": {
+            "definition": "Paranasal sinuses within the field of view are well pneumatized and clear. Patent sinus drainage pathways. No significant sinus mucosal thickening or mucus retention cysts. No significant nasal septal deviation or septal bone spur.",
+            "impression": "none"
+        },
+        "Mucus Retention Cyst": {
+            "definition": "Incidental mucous retention cyst present, without evidence of suspicious erosive or expansile change of the sinus and with no evidence of sinus outflow obstruction. This is most often an incidental finding that is usually subclinical.",
+            "impression": "none"
+        },
+        "Sinusitus": {
+            "definition": "Partial and/or scattered opacification of the visualized portions of the paranasal sinus(es) with imaging features suggesting acute sinusitis such as layering air-fluid level and aerated secretions. Consider treatment if clinically indicated and/or referral to Primary Care provider and/or ENT as needed.",
+            "impression": "<strong>Impression:</strong> See details regarding paranasal sinus findings which can indicate acute sinusitis in the appropriate context. Consider treatment if clinically indicated and/or referral to Primary Care provider or ENT as needed."
+        },
+        "Maxillary Sinus Surgery": {
+            "definition": "Evidence of prior surgery involving the maxillary sinuses and sinus turbinates, likely reflecting antrostomy and turbinectomy. Associated mucosal thickening that is likely reactive. Correlate with surgical and ENT history.",
+            "impression": "none"
+        },
+        "Chronic Sinusitus": {
+            "definition": "Diffuse bony sclerosis involving the <span class='additional-option'>SINUS NAME]</span> sinus/es with associated mucosal thickening and/or partial opacification. Radiographic findings suggest chronic sinusitis, possibly with a superimposed acute component.<br> <span class='additional-option'>[DELETE TEXT IF NOT NEEDED]</span> Opacification of one or more sinuses including dense material, suggesting allergic or fungal sinusitis.<br> <span class='additional-option'>[DELETE TEXT IF NOT NEEDED]</span> Associated periapical lucency contiguous with sinus cavity, (oro-antral fistula) which could be contributory to the suspected chronic sinusitis.<br>Consider treatment if clinically indicated and/or referral to Primary Care provider and/or ENT as needed.",
+            "impression": "<strong>Impression:</strong> See details regarding paranasal sinus findings which can indicate chronic sinusitis (or acute on chronic sinusitis) in the appropriate context. Consider treatment if clinically indicated and/or referral to Primary Care provider or ENT as needed."
+        },
+        "Osteomeatal/Middle Meatus Obstruction": {
+            "definition": "Extensive opacification of the <span class='additional-option' data-macro-option='true'>[RIGHT/LEFT/BILATERAL]</span> maxillary, ethmoid and frontal sinuses. This pattern of sinus opacification can be seen in the setting of obstruction of the middle meatus and/or osteomeatal unit.",
+            "impression": "<strong>Impression:</strong> See details regarding paranasal sinus findings which can indicate an osteomeatal pattern of sinus obstruction with associated acute and/or chronic sinusitis. Consider treatment if clinically indicated and/or referral to Primary Care provider or ENT as needed."
+        },
+        "Septal Deviation": {
+            "definition": "<span class='additional-option' data-macro-option='true'>[RIGHTWARD/LEFTWARD/BILATERAL]</span> nasal septal deviation which results in some associated narrowing of the nasal cavity.",
+            "impression": "none"
+        },
+        "Septal Deviation w/ Bone Spur": {
+            "definition": "<span class='additional-option' data-macro-option='true'>[RIGHTWARD/LEFTWARD/BILATERAL]</span> nasal septal deviation and bone spur which results in some associated narrowing of the nasal cavity.",
+            "impression": "none"
+        },
+        "Concha Bullosa": {
+            "definition": "Concha bullosa present. A pneumatized turbinate can contribute to narrowing of the middle meatus and sinus outflow pathways. Would correlate with any known history of sinusitis.",
+            "impression": "none"
+        },
+        "Inverted Papilloma": {
+            "definition": "Calcific elements present in the medial aspect of the <span class='additional-option' data-macro-option='true'>[RIGHT/LEFT/BILATERAL]</span> maxillary sinus with associated sinus opacification. An inverted papilloma, a low grade neoplasm arising from the medial maxillary wall could be present. Would correlate with any known history of sinusitis.",
+            "impression": "<strong>Impression:</strong> Imaging features in the maxillary sinus suggesting presence of an inverted papilloma. Consider ENT referral and dedicated CT and/or MRI."
+        },
+        "notWellSeen": {
+            "definition": "Not within the field of view or not well visualized by this study.",
+            "impression": "none"
+        },
+        "other": {
+            "definition": "",
+            "impression": "none"
+        }
+    },
+    "skullBase": {
+        "normal": {
+            "definition": "Unremarkable CT appearance of the nasopharynx. No evidence of mass lesion or abnormal effacement of the pharyngeal recesses or fossa of Rosenmuller.",
+            "impression": "none"
+        },
+        "Englarged Sella": {
+            "definition": "Apparent expansion of the bony margins of the sella turcica (>12 mm) in maximum dimension. Although this may reflect a benign process, an underlying pituitary macroadenoma could result in this appearance. No evidence of bony erosion or invasion of the adjacent paranasal sinuses. Correlate with clinical symptoms including history of endocrine abnormalities and/or visual symptoms. Dedicated MRI with contrast would be helpful for further evaluation.",
+            "impression": "<strong>Impression:</strong> Expanded sella turcica with pituitary adenoma not excluded, as described. Consider dedicated MRI imaging and neurology and/or neurosurgery referral."
+        },
+        "Cerumen": {
+            "definition": "Soft tissue density noted in the <span class='additional-option' data-macro-option='true'>[RIGHT/LEFT/BILATERAL]</span> external auditory canal(s), presumably reflecting cerumen. This can contribute to decreased hearing and attention. Correlate with clinical exam findings.",
+            "impression": "none"
+        },
+        "High Riding Jugular Bulb": {
+            "definition": "Greater than expected smooth enlargement and high riding position of the <span class='additional-option' data-macro-option='true'>[RIGHT/LEFT/BILATERAL]</span> jugular bulb. This finding can be seen in the setting of tinnitus, and less commonly vertigo or facial nerve symptoms. Correlate with clinical symptoms on the affected side.",
+            "impression": "<strong>Impression:</strong> High-riding jugular bulb, as detailed. In the presence of clinical symptoms, consider dedicated contrast-enhanced CT or MRI of the skull base and ENT follow-up."
+        },
+        "Otitis Externa": {
+            "definition": "Soft tissue thickening noted along the <span class='additional-option' data-macro-option='true'>[RIGHT/LEFT/BILATERAL]</span> external auditory canal walls. This <span class='additional-option'>[IS/IS NOT]</span> associated with significant EAC narrowing. This can contribute to decreased hearing and attention. Correlate with clinical exam findings including presence of pain, redness and/or discharge.",
+            "impression": "<strong>Impression:</strong> Radiographic findings that can be seen in the setting of otitis externa, as described. Primary Care provider or ENT referral can be considered as needed, particularly in patients with a history of diabetes or advanced age."
+        },
+        "Mastoid Effusion": {
+            "definition": "Partial versus complete opacification of the <span class='additional-option' data-macro-option='true'>[RIGHT/LEFT/BILATERAL]</span> mastoid air cells which can be seen with chronic or acute mastoiditis. No definite evidence of bony erosion of the mastoid process, adjacent skull or auditory structures. Correlate with signs of infection and findings on clinical exam.",
+            "impression": "<strong>Impression:</strong> Mastoid effusion which can indicate mastoiditis, as described. Primary Care provider or ENT referral can be considered as needed, particularly if associated with middle ear findings."
+        },
+        "Middle Ear Effusion": {
+            "definition": "Fluid vs soft tissue density noted in the <span class='additional-option' data-macro-option='true'>[RIGHT/LEFT/BILATERAL]</span> middle ear, presumably due to an infectious or inflammatory process. Correlate with signs of infection and findings on clinical exam.",
+            "impression": "<strong>Impression:</strong> Findings suggestive of otitis media, as described below. Primary Care provider or ENT referral can be considered as needed, particularly if associated with mastoid findings."
+        },
+        "Cholesteatoma": {
+            "definition": "Fluid vs soft tissue density noted in the <span class='additional-option' data-macro-option='true'>[RIGHT/LEFT/BILATERAL]</span> middle ear including at Prussak's space interposed between the middle ear ossicles. Although this can be due to an infectious process, an underlying cholesteatoma may be present. Mastoid effusion is [NOT] present. Scutum does [NOT] show signs of erosion. Correlate with signs of chronic hearing loss, ear canal drainage, and or infection. Correlate with history of prior tympanic membrane rupture or injury.",
+            "impression": "<strong>Impression:</strong> Findings concerning for cholesteatoma. Consider dedicated imaging with MRI including non-echo planar DWI. Consider referral to ENT for direct visualization."
+        },
+        "Elongation/Calcification of the Styloid": {
+            "definition": "Elongation of the styloid process and/or calcific density is seen along the expected course of the <span class='additional-option' data-macro-option='true'>[RIGHT/LEFT/BILATERAL]</span> stylohyoid ligament. This may represent an incidental finding, however can also be symptomatic if there is resultant compression of the adjacent structures.",
+            "impression": "<strong>Impression:</strong> Styloid process elongation and/or stylohyoid ligament Calcification which can be associated with Eagle syndrome, as detailed above. Consider referral to an ENT for further evaluation."
+        },
+        "notWellSeen": {
+            "definition": "Not within the field of view or not well visualized by this study.",
+            "impression": "none"
+        },
+        "other": {
+            "definition": "",
+            "impression": "none"
+        }
+    },
+    "tmj": {
+        "normal": {
+            "definition": "Normal CT appearance of the temporomandibular joint. The mandibular condyle demonstrates normal rounded morphology with no flattening or irregularity of the articular surface. No significant subchondral sclerosis or joint space narrowing. Normal appearance of the condylar fossa.",
+            "impression": "none"
+        },
+        "Mild": {
+            "definition": "Grade 1/Mild temporomandibular joint degenerative change.",
+            "impression": "<strong>Impression:</strong> Temporomandibular joint degenerative change present. See findings for radiologic classification and discussion."
+        },
+        "Moderate": {
+            "definition": "Grade 2/Moderate temporomandibular joint degenerative change. This degree of temporomandibular joint degenerative change is sometimes associated with underlying internal derangement of the articular disc and/or retrodiscal tissue and MRI can more definitively evaluate as clinically indicated.",
+            "impression": "<strong>Impression:</strong> Temporomandibular joint degenerative change present. See findings for radiologic classification and discussion."
+        },
+        "Severe": {
+            "definition": "Grade 3/Severe temporomandibular joint degenerative change. This degree of temporomandibular joint degenerative change has a high probability of coexistent internal derangement of the articular disc and/or retrodiscal tissue and MRI can more definitively evaluate as clinically indicated.",
+            "impression": "<strong>Impression:</strong> Temporomandibular joint degenerative change present. See findings for radiologic classification and discussion."
+        },
+        "notWellSeen": {
+            "definition": "Not within the field of view or not well visualized by this study.",
+            "impression": "none"
+        },
+        "other": {
+            "definition": "",
+            "impression": "none"
+        }
+    },
+    "cervicalSpine": {
+        "normal": {
+            "definition": "Normal appearance of the visualized cervical spine. The cervical vertebrae are normal in height and alignment. Normal appearance of the craniocervical junction and atlantodental joint.",
+            "impression": "none"
+        },
+        "Atlantodental": {
+            "definition": "Mild degenerative changes at the atlantodental joint which are typical of osteoarthritis. The visualized cervical vertebrae are normal in height and alignment.",
+            "impression": "<strong>Impression:</strong> Mild degenerative changes at the atlantodental joint which are typical of osteoarthritis."
+        },
+        "C Spine DJD": {
+            "definition": "Degenerative spondylotic change of the partially visualized cervical spine with facet and/or uncovertebral arthropathy and/or disc degeneration. Would correlate clinically for any referable signs or symptoms. If clinically indicated, the cervical spine can be more definitively evaluated by dedicated cervical spine CT or MRI.",
+            "impression": "<strong>Impression:</strong> Degenerative change present in the partially visualized cervical spine with facet arthropathy and disc degeneration as detailed in findings."
+        },
+        "Fusion Hardware": {
+            "definition": "Spinal fusion hardware visualized in the upper cervical spine. Visualized hardware appears intact without evidence of loosening or failure. Degenerative spondylotic changes of the partially visualized cervical spine. Would correlate clinically for any referable signs or symptoms. If clinically indicated, the cervical spine can be more definitively evaluated by dedicated cervical spine CT or MRI.",
+            "impression": "none"
+        },
+        "OPLL": {
+            "definition": "Ossification along the posterior margin of multiple contiguous cervical vertebral bodies in a pattern suggestive of ossification of the posterior longitudinal ligament. This can be associated with clinically significant spinal canal narrowing. Cervical spine can be more definitively evaluated by dedicated cervical spine CT or MRI.",
+            "impression": "<strong>Impression:</strong> Ossification along the posterior longitudinal ligament, as described in findings. Consider spine surgery consultation and/or follow up."
+        },
+        "notWellSeen": {
+            "definition": "Not within the field of view or not well visualized by this study.",
+            "impression": "none"
+        },
+        "other": {
+            "definition": "",
+            "impression": "none"
+        }
+    },
+    "salivaryGlands": {
+        "normal": {
+            "definition": "Limited evaluation of soft tissues and lowered sensitivity to detect pathology due to bone optimized CBCT technique. Within these limits, there is no gross abnormality of the visualized soft tissues and no appreciable mass lesion or lymphadenopathy.",
+            "impression": "none"
+        },
+        "Carotid Plaque": {
+            "definition": "Calcified plaques involving the visualized carotid arteries. Calcified plaques are pathognomonic for atherosclerotic disease. Please note that this study cannot evaluate for any possible luminal stenosis. Further evaluation with a dedicated vascular imaging study such as CTA, MRA, or Ultrasound or referral to neurology or other specialist could be considered as indicated by clinical presentation and any vascular risk factors.",
+            "impression": "<strong>Impression:</strong> Carotid atherosclerotic disease present. Reference details and recommendations in findings."
+        },
+        "notWellSeen": {
+            "definition": "Not within the field of view or not well visualized by this study.",
+            "impression": "none"
+        },
+        "other": {
+            "definition": "",
+            "impression": "none"
+        }
+    }
+}
