@@ -4,6 +4,7 @@ body {
 
 header {
     display: flex;
+    z-index: 2;
     flex-direction: column;
     position: fixed;
     top: 0;
@@ -23,7 +24,41 @@ header {
 #mainheader,
 #subheader {
     padding: var(--dr-spacing-medium);
+    z-index: 2;
+}
 
+.study-info {
+    padding-top: 6px;
+    position: relative;
+    border-radius: 4px;
+    padding: var(--dr-spacing-small);
+}
+
+.study-info:hover {
+    background: var(--dr-color-background-primary);
+    cursor: pointer;
+}
+
+
+.extra-info {
+    z-index: 2;
+    min-width: 250px;
+    width: 100%;
+    position: absolute;
+    top: 44px;
+    left: 0;
+    display: none;
+    flex-direction: column;
+    background: white;
+    gap: 4px;
+    padding: var(--dr-spacing-small);
+    border-radius: 4px;
+    border: 1px solid var(--dr-color-border-primary);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, .25);
+}
+
+.study-info:hover .extra-info {
+    display: flex;
 }
 
 /* Recommendation Icons */
@@ -35,7 +70,7 @@ header {
 }
 
 #mainContent {
-    padding-top: 136px;
+    padding-top: 149px;
     height: 100vh;
     overflow-y: hidden;
 }
@@ -54,6 +89,10 @@ header {
     margin-bottom: 200px;
 }
 
+#macros .dr-utility {
+    z-index: 0;
+}
+
 .btn-row {
     display: flex;
     flex-direction: row;
@@ -65,6 +104,7 @@ header {
     padding: var(--dr-spacing-medium);
     height: 100vh;
     overflow-y: scroll;
+    width: 100%;
 }
 
 #builder-col .panel {
@@ -84,8 +124,6 @@ header {
 }
 
 #textArea {
-    /* border: 1px solid var(--dr-color-border-primary); */
-    /* border-radius: var(--dr-radius-medium); */
     padding: var(--dr-spacing-medium) 0;
     width: 100%;
     font-size: 16px;
@@ -100,12 +138,16 @@ header {
 
 div[contentEditable="true"] {
     padding: var(--dr-spacing-2x-small);
+    border: 1px solid var(--alpha-neutral-100-0);
     border-radius: var(--dr-radius-small);
     min-height: 40px;
     display: flex;
     flex-direction: column;
     gap: 8px;
+}
 
+div[contentEditable="true"]:hover {
+    border: 1px solid var(--dr-color-border-primary);
 }
 
 div[contentEditable="true"]:focus-visible {

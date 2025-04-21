@@ -27,7 +27,7 @@
     <header>
         <div id="mainheader" class="d-flex justify-content-between align-items-center">
             <div>
-                <a class="btn dr-btn-tertiary inverse">Exit Report Builder</a>
+                <a class="btn dr-btn-tertiary inverse">Exit Study</a>
             </div>
             <div class="d-flex">
                 <div class="d-flex gap-2">
@@ -40,17 +40,32 @@
                 </div>
             </div>
             <div class="d-flex gap-2">
-                <a class="btn dr-btn-tertiary inverse">Preview Report</a>
-                <a class="btn dr-btn-primary">Click to Sign Report</a>
+                <a class="btn dr-btn-tertiary inverse">Preview</a>
+                <a class="btn dr-btn-primary">Sign Report</a>
 
             </div>
         </div>
         <div id="subheader" class="d-flex row">
             <div class="d-flex justify-content-between align-items-center">
-                <h2 class="d-flex">Patient Name</h2>
-                <div class="d-flex gap-2">
-                    <div class="no-sig-find"><i class="bi bi-check-circle"></i></div>
-                    No Significant Findings
+                <div class="d-flex align-items-center gap-3">
+                    <h2 class="d-flex">Montgomery Burns</h2>
+                    <div class="d-flex gap-3 study-info">
+                        <p><strong>Birthdate:</strong> Dec. 15, 1980 <i class="bi bi-chevron-down"></i></p>
+                        <div class="extra-info">
+                            <p><strong>Scan Date:</strong> Apr. 18, 2025</p>
+                            <p><strong>Referring Office:</strong> Apr. 18, 2025</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex gap-2 align-items-center">
+                    <label><strong>Recommendation:</strong></label>
+                    <select class="form-select" aria-label="Default select example">
+                        <option selected>No Significant Findings
+                        </option>
+                        <option value="1">Findings of Interest</option>
+                        <option value="2">Important</option>
+                        <option value="3">Critical</option>
+                    </select>
                 </div>
             </div>
         </div>
@@ -65,7 +80,7 @@
                         <h2>Macros</h2>
                     </div>
                     <!-- Maxilla Macros -->
-                    <div id="maxillaMacros" class="d-flex flex-column gap-2" data-macro-section="maxilla">
+                    <div class="d-flex flex-column gap-2" data-macro-section="maxilla">
                         <div><strong>Maxilla:</strong></div>
                         <div class="btn-row">
                             <div>
@@ -111,7 +126,7 @@
                         </div>
                     </div>
                     <!-- Mandible Macros -->
-                    <div id="mandibleMacros" class="d-flex flex-column gap-2" data-macro-section="mandible">
+                    <div class="d-flex flex-column gap-2" data-macro-section="mandible">
                         <div><strong>Mandible:</strong></div>
                         <div class="btn-row">
                             <div>
@@ -162,7 +177,7 @@
                         </div>
                     </div>
                     <!-- Alveolar Macros -->
-                    <div id="alveolarMacros" class="d-flex flex-column gap-2" data-macro-section="alveolar">
+                    <div class="d-flex flex-column gap-2" data-macro-section="alveolar">
                         <div><strong>Alveolar/Teeth:</strong></div>
                         <div class="btn-row">
                             <div>
@@ -229,7 +244,7 @@
                         </div>
                     </div>
                     <!-- Nasophraynx Macros -->
-                    <div id="nasopharynxMacros" class="d-flex flex-column gap-2" data-macro-section="nasopharynx">
+                    <div class="d-flex flex-column gap-2" data-macro-section="nasopharynx">
                         <div><strong>Nasopharynx:</strong></div>
                         <div class="btn-row">
                             <div>
@@ -259,7 +274,7 @@
                         </div>
                     </div>
                     <!-- Nasophraynx Macros -->
-                    <div id="oropharynxMacros" class="d-flex flex-column gap-2" data-macro-section="oropharynx">
+                    <div class="d-flex flex-column gap-2" data-macro-section="oropharynx">
                         <div><strong>Oropharynx/Airway:</strong></div>
                         <div class="btn-row">
                             <div>
@@ -324,7 +339,7 @@
                         </div>
                     </div>
                     <!-- Paranasal Macros -->
-                    <div id="paranasalSinuses" class="d-flex flex-column gap-2" data-macro-section="paranasalSinuses">
+                    <div class="d-flex flex-column gap-2" data-macro-section="paranasalSinuses">
                         <div><strong>Paranasal Sinuses:</strong></div>
                         <div class="btn-row">
                             <div>
@@ -425,8 +440,8 @@
                         </div>
                     </div>
                     <!-- Skull Base Macros -->
-                    <div id="skullBase" class="d-flex flex-column gap-2" data-macro-section="skullBase">
-                        <div><strong>Paranasal Sinuses:</strong></div>
+                    <div class="d-flex flex-column gap-2" data-macro-section="skullBase">
+                        <div><strong>Skull Base & Temporal Bones:</strong></div>
                         <div class="btn-row">
                             <div>
                                 <button class="btn dr-utility active-macro" data-macro-name="normal"
@@ -542,7 +557,7 @@
                         </div>
                     </div>
                     <!-- TMJ Macros -->
-                    <div id="maxillaMacros" class="d-flex flex-column gap-2" data-macro-section="tmj">
+                    <div class="d-flex flex-column gap-2" data-macro-section="tmj">
                         <div><strong>Temporomandibular Joints:</strong></div>
                         <div class="btn-row">
                             <div>
@@ -574,7 +589,7 @@
                         </div>
                     </div>
                     <!-- Visualized Cervical Spine Macros -->
-                    <div id="maxillaMacros" class="d-flex flex-column gap-2" data-macro-section="cervicalSpine">
+                    <div class="d-flex flex-column gap-2" data-macro-section="cervicalSpine">
                         <div><strong>Visualized Cervical Spine:</strong></div>
                         <div class="btn-row">
                             <div>
@@ -610,7 +625,7 @@
                         </div>
                     </div>
                     <!-- Visualized Cervical Spine Macros -->
-                    <div id="maxillaMacros" class="d-flex flex-column gap-2" data-macro-section="salivaryGlands">
+                    <div class="d-flex flex-column gap-2" data-macro-section="salivaryGlands">
                         <div><strong>Salivary Glands, Lymph Nodes and Soft Tissues:</strong></div>
                         <div class="btn-row">
                             <div>
@@ -637,16 +652,16 @@
             </div>
             <!-- Report Builder -->
             <div id="builder-col">
-                <div class="panel d-flex flex-column gap-3">
+                <div class="panel d-flex flex-column gap-2">
                     <!-- Header -->
                     <div class="header justify-content-between width-100">
-                        <h2>Report Builder</h2>
+                        <h2>Findings</h2>
                         <div class="d-flex flex-column">
                             <button href="" class="btn dr-utility" disabled>Load Previous Session</button>
                         </div>
                     </div>
                     <!-- Report Builder Text Area -->
-                    <div id="textArea" class="d-flex flex-column gap-4">
+                    <div id="textArea" class="d-flex flex-column gap-2">
                         <!-- Maxilla -->
                         <div class="d-flex flex-column">
                             <div class="label">Maxilla:</div>

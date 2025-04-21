@@ -303,7 +303,11 @@
 }
 
 /* Manual Toggle for Dark Mode. dark theme needs to equal True */
-body[data-dark-theme='true'] {}
+html {
+    scroll-behavior: smooth;
+}
+
+/* body[data-dark-theme='true'] {} */
 
 body {
     background: var(--dr-color-background-primary);

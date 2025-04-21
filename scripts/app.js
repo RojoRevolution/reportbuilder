@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const entireMacroButtonSection = document.getElementById('macros')
     const maxillaMacroButtonsSection = document.getElementById('maxillaMacros')
-    const maxillaMacroButtons = maxillaMacroButtonsSection.querySelectorAll('.dr-utility');
+    // const maxillaMacroButtons = maxillaMacroButtonsSection.querySelectorAll('.dr-utility');
     const allMacroButtons = entireMacroButtonSection.querySelectorAll('.dr-utility');
     // const mandibleMacroButtons = document.getElementById('mandibleMacros').querySelectorAll('.dr-utility');;
     // const allMacroButtons = document.querySelectorAll('.dr-utility');
@@ -117,7 +117,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-
     // Functions sets the active class for macro buttons
     setActiveButtonsAndReportText = (macroSection, currentButton, currentBtnName, activeStatus, multiSelect) => {
         // Local Variables for each macro section
@@ -126,20 +125,15 @@ document.addEventListener("DOMContentLoaded", () => {
         let allDropDownOptions = activeSection.querySelectorAll('li');
         let activeSectionCheckButtons = activeSection.querySelectorAll('[data-multi-select="true"]');
         let activeSectionRadioButtons = activeSection.querySelectorAll('[data-multi-select="false"]');
-        // let selectedMacroButton = activeSection.querySelectorAll(`[data-macro-name="${currentBtnName}]`);
         let activeTextSection = document.querySelector(`[data-report-section="${macroSection}"]`);
-        console.log("Macro Section: ", macroSection);
-        console.log("Active Text Section: ", activeTextSection);
-        let activeTextSectionParent = activeTextSection.parentElement;
-        console.log("Active Text Section Parent: ", activeTextSectionParent);
 
+        let activeTextSectionParent = activeTextSection.parentElement;
 
         // Function checks how many multi select buttons are active
 
         checkActiveStatus = () => {
             activeCount = activeSection.querySelectorAll(".btn.dr-utility.active-macro").length;
         }
-
 
         // If statements check if button is Multi-select, and then target buttons current status
         if (multiSelect === "false") {
