@@ -23,7 +23,7 @@ header {
 
 #mainheader,
 #subheader {
-    padding: var(--dr-spacing-medium);
+    padding: var(--dr-spacing-small);
     z-index: 2;
 }
 
