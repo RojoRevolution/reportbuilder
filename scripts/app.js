@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const allReportSection = document.querySelectorAll('[data-report-section]');
     const allDropdownOptions = document.querySelectorAll('[data-additional-option]');
 
+    const allAddImpressionBtns = document.querySelectorAll('[data-impression-section]');
     // console.log(allDropdownOptions)
 
     additionalSelectionIcons = [
@@ -149,7 +150,6 @@ document.addEventListener("DOMContentLoaded", () => {
             bracketedTextSpan = activeTextSection.querySelector('span');
             let allImpressions = activeTextSectionParent.querySelectorAll('.impression');
             allImpressions.forEach((impression) => {
-                console.log("in Remove forEach");
                 impression.remove();
             });
             allDropDownOptions.forEach((option) => {
@@ -158,7 +158,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 option.setAttribute('data-option-active', 'false');
                 span.innerHTML = additionalSelectionIcons[0];
             });
-            activeTextSection.appendChild(jsonData[macroSection][currentBtnName].definition)
+            // activeTextSection.appendChild(jsonData[macroSection][currentBtnName].definition)
             checkActiveStatus();
 
         }
@@ -307,8 +307,71 @@ document.addEventListener("DOMContentLoaded", () => {
             // setBracketedText(currentSection, currentOption, optionValue);
 
 
+        });
+    });
+
+    let removeImpressionBtn;
+    let closeButton;
+
+    let createCloseButton = () => {
+        closeBtn = document.createElement('a');
+        closeBtn.classList.add('btn');
+        closeBtn.classList.add('dr-btn-tertiary');
+        closeBtn.classList.add('danger');
+        closeBtn.setAttribute('data-btn-type', 'remove-impression')
+        closeBtn.innerHTML = '<i class="bi bi-x-lg"></i>'
+        closeBtn.setAttribute('onClick', 'removeImpression(this, event)')
+    }
+
+    appendEmptyImpression = (textSection) => {
+        let parentDiv = textSection.parentElement;
+        let newDiv = document.createElement('div');
+        newDiv.classList.add('empty-impression');
+        // newDiv.innerHTML = "<strong>Impression:</strong> Add impression here";
+        let newLabel = document.createElement('p');
+        newLabel.innerHTML = "<strong>Impression:</strong>"
+        let newImpression = document.createElement('p')
+        newImpression.setAttribute('contenteditable', 'true');
+
+        let closeBtn = document.createElement('a');
+        closeBtn.classList.add('btn');
+        closeBtn.classList.add('dr-btn-tertiary');
+        closeBtn.classList.add('danger');
+        closeBtn.setAttribute('data-btn-type', 'remove-impression')
+        closeBtn.innerHTML = '<i class="bi bi-x-lg"></i>'
+        closeBtn.setAttribute('onClick', 'removeImpression(this, event)')
+
+        // console.log(removeImpressionBtn)
+        parentDiv.appendChild(newDiv);
+        newDiv.appendChild(newLabel);
+        newDiv.appendChild(newImpression);
+        newDiv.appendChild(closeBtn);
+    }
+
+    // Event listener for all Add Empty Impression buttons
+    allAddImpressionBtns.forEach((button) => {
+        button.addEventListener("click", (impression) => {
+            console.log("Click")
+
+            let currentOption = impression.currentTarget;
+            let optionValue = currentOption.getAttribute('data-impression-section');
+            let editableTextSection = document.querySelector(`[data-report-section="${optionValue}"]`);
+
+            appendEmptyImpression(editableTextSection);
         })
-    })
+    });
+
+    // onClick function that removes an impression field
+    removeImpression = (element, event) => {
+        console.log(element);
+        event.preventDefault();
+        console.log("Remove Impression")
+        let currentRemoveButton = event.target;
+        console.log(currentRemoveButton)
+
+        let impresionDiv = element.parentElement;
+        impresionDiv.remove();
+    }
 
 
 });
