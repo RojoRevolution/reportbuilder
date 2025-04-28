@@ -136,7 +136,8 @@ header {
 }
 
 
-div[contentEditable="true"] {
+div[contentEditable="true"],
+p[contentEditable="true"] {
     position: relative;
     padding: var(--dr-spacing-2x-small);
     border: 1px solid var(--alpha-neutral-100-0);
@@ -210,6 +211,10 @@ button[data-btn-type="impression"] {
 
 .empty-impression>p:nth-of-type(2) {
     width: 100%;
+}
+
+.empty-impression p {
+    padding: var(--dr-spacing-2x-small);
 }
 
 /* div[contentEditable="true"]:hover {
