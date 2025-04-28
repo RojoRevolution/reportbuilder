@@ -136,8 +136,7 @@ header {
 }
 
 
-div[contentEditable="true"],
-p[contentEditable="true"] {
+div[contentEditable="true"] {
     position: relative;
     padding: var(--dr-spacing-2x-small);
     border: 1px solid var(--alpha-neutral-100-0);
