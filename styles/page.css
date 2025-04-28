@@ -137,6 +137,7 @@ header {
 
 
 div[contentEditable="true"] {
+    position: relative;
     padding: var(--dr-spacing-2x-small);
     border: 1px solid var(--alpha-neutral-100-0);
     border-radius: var(--dr-radius-small);
@@ -153,6 +154,19 @@ div[contentEditable="true"]:hover {
 div[contentEditable="true"]:focus-visible {
     box-shadow: 0 0 12px var(--alpha-blue-500-50);
     outline: 1px solid var(--dr-color-border-brand-default);
+}
+
+
+button[data-btn-type="impression"] {
+    display: none;
+}
+
+.anatomy-section:hover button[data-btn-type="impression"] {
+    display: block;
+}
+
+.add-impression-container {
+    display: block;
 }
 
 .change-effect {
@@ -178,11 +192,24 @@ div[contentEditable="true"]:focus-visible {
     }
 }
 
-.impression {
+.impression,
+.empty-impression {
     margin-top: 12px;
     background: var(--dr-color-background-accent);
     min-height: 40px;
     flex-direction: row !important;
+}
+
+.empty-impression {
+    padding: var(--dr-spacing-2x-small);
+    display: flex;
+    width: 100%;
+    gap: 8px;
+    border-radius: var(--dr-radius-small);
+}
+
+.empty-impression>p:nth-of-type(2) {
+    width: 100%;
 }
 
 /* div[contentEditable="true"]:hover {
@@ -254,4 +281,31 @@ div[contentEditable="true"]:focus-visible {
 .dropdown-container>ul li:hover {
     background: var(--dr-color-background-brand);
     cursor: pointer;
+}
+
+.add-impression {
+    color: var(--dr-color-text-brand);
+    display: none;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 0 var(--dr-spacing-small);
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 400;
+    transition: .25s;
+}
+
+.add-impression:hover {
+    color: var(--dr-color-text-brand);
+    background: var(--dr-color-background-button-secondary-hover);
+    transition: .25s;
+}
+
+.anatomy-section:hover .label {
+    color: var(--dr-color-text-brand);
+    transition: .25s;
+}
+
+.anatomy-section:hover .add-impression {
+    display: block;
 }

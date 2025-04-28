@@ -658,14 +658,19 @@
                     <div class="header justify-content-between width-100">
                         <h2>Findings</h2>
                         <div class="d-flex flex-column">
-                            <button href="" class="btn dr-utility" disabled>Load Previous Session</button>
+                            <button class="btn dr-utility" disabled>Load Previous Session</button>
                         </div>
                     </div>
                     <!-- Report Builder Text Area -->
-                    <div id="textArea" class="d-flex flex-column gap-2">
+                    <div id="textArea" class="d-flex flex-column gap-3">
                         <!-- Maxilla -->
-                        <div class="d-flex flex-column">
-                            <div class="label">Maxilla:</div>
+                        <div class="d-flex flex-column anatomy-section gap-2">
+                            <div class="d-flex flex-row  gap-2">
+                                <div class="label">Maxilla:</div>
+                                <a hreaf="#" class="add-impression" data-btn-type="impression"
+                                    data-impression-section="maxilla"><i class="bi bi-plus-lg"></i> Add
+                                    Impression</a>
+                            </div>
                             <div id="maxilla" contenteditable="true" data-report-section="maxilla">
                                 <p data-macro-selected="normal">No suspicious mass lesion. No evidence of expansile,
                                     lucent or sclerotic lesion. Bone
@@ -673,8 +678,13 @@
                             </div>
                         </div>
                         <!-- Mandible -->
-                        <div class="d-flex flex-column">
-                            <div class="label">Mandible:</div>
+                        <div class="d-flex flex-column anatomy-section gap-2">
+                            <div class="d-flex flex-row  gap-2">
+                                <div class="label">Mandible:</div>
+                                <a hreaf="#" class="add-impression" data-btn-type="impression"
+                                    data-impression-section="mandible"><i class="bi bi-plus-lg"></i> Add
+                                    Impression</a>
+                            </div>
                             <div id="mandible" contenteditable="true" data-report-section="mandible">
                                 <p data-macro-selected="normal">
                                     No suspicious mass lesion. No evidence of expansile, lucent or sclerotic lesion.
@@ -684,8 +694,13 @@
                             </div>
                         </div>
                         <!-- Alveolar/Teeth -->
-                        <div class="d-flex flex-column">
-                            <div class="label">Alveolar/Teeth:</div>
+                        <div class="d-flex flex-column anatomy-section gap-2">
+                            <div class="d-flex flex-row  gap-2">
+                                <div class="label">Alveolar:</div>
+                                <a hreaf="#" class="add-impression" data-btn-type="impression"
+                                    data-impression-section="alveolar"><i class="bi bi-plus-lg"></i> Add
+                                    Impression</a>
+                            </div>
                             <div id="alveolar" contenteditable="true" data-report-section="alveolar">
                                 <p data-macro-selected="normal">
                                     No CT evidence of significant periapical lucencies or dental caries. The buccal and
@@ -694,8 +709,13 @@
                             </div>
                         </div>
                         <!-- Nasopharynx -->
-                        <div class="d-flex flex-column">
-                            <div class="label">Nasopharynx:</div>
+                        <div class="d-flex flex-column anatomy-section gap-2">
+                            <div class="d-flex flex-row  gap-2">
+                                <div class="label">Nasopharynx:</div>
+                                <a hreaf="#" class="add-impression" data-btn-type="impression"
+                                    data-impression-section="nasopharynx"><i class="bi bi-plus-lg"></i> Add
+                                    Impression</a>
+                            </div>
                             <div id="nasopahrynx" contenteditable="true" data-report-section="nasopharynx">
                                 <p data-macro-selected="normal">
                                     Unremarkable CT appearance of the nasopharynx. No evidence of mass lesion or
@@ -705,8 +725,13 @@
                             </div>
                         </div>
                         <!-- Oropharynx/Airway: -->
-                        <div class="d-flex flex-column">
-                            <div class="label">Oropharynx/Airway:</div>
+                        <div class="d-flex flex-column anatomy-section gap-2">
+                            <div class="d-flex flex-row  gap-2">
+                                <div class="label">Oropharynx/Airway:</div>
+                                <a hreaf="#" class="add-impression" data-btn-type="impression"
+                                    data-impression-section="oropharynx"><i class="bi bi-plus-lg"></i> Add
+                                    Impression</a>
+                            </div>
                             <div id="oropharynx" contenteditable="true" data-report-section="oropharynx">
                                 <p data-macro-selected="normal">
                                     No suspicious mass lesion or mass like structure within the visualized airway,
@@ -720,8 +745,13 @@
                             </div>
                         </div>
                         <!-- Paranasal Sinuses:: -->
-                        <div class="d-flex flex-column">
-                            <div class="label">Paranasal Sinuses:</div>
+                        <div class="d-flex flex-column anatomy-section gap-2">
+                            <div class="d-flex flex-row  gap-2">
+                                <div class="label">Paranasal Sinuses:</div>
+                                <a hreaf="#" class="add-impression" data-btn-type="impression"
+                                    data-impression-section="paranasalSinuses"><i class="bi bi-plus-lg"></i> Add
+                                    Impression</a>
+                            </div>
                             <div id="paranasalSinuses" contenteditable="true" data-report-section="paranasalSinuses">
                                 <p data-macro-selected="normal">
                                     Paranasal sinuses within the field of view are well pneumatized and clear. Patent
@@ -733,8 +763,13 @@
                             </div>
                         </div>
                         <!-- Skull Base & Temporal Bones -->
-                        <div class="d-flex flex-column">
-                            <div class="label">Skull Base & Temporal Bones:</div>
+                        <div class="d-flex flex-column anatomy-section gap-2">
+                            <div class="d-flex flex-row  gap-2">
+                                <div class="label">Skull Base & Temporal Bones:</div>
+                                <a hreaf="#" class="add-impression" data-btn-type="impression"
+                                    data-impression-section="skullBase"><i class="bi bi-plus-lg"></i> Add
+                                    Impression</a>
+                            </div>
                             <div id="skullBase" contenteditable="true" data-report-section="skullBase">
                                 <p data-macro-selected="normal">
                                     Unremarkable CT appearance of the clivus and petrooccipital fissure with no
@@ -750,8 +785,13 @@
                             </div>
                         </div>
                         <!-- Temporomandibular Joints -->
-                        <div class="d-flex flex-column">
-                            <div class="label">Temporomandibular Jointss:</div>
+                        <div class="d-flex flex-column anatomy-section gap-2">
+                            <div class="d-flex flex-row  gap-2">
+                                <div class="label">Temporomandibular Joints:</div>
+                                <a hreaf="#" class="add-impression" data-btn-type="impression"
+                                    data-impression-section="tmj"><i class="bi bi-plus-lg"></i> Add
+                                    Impression</a>
+                            </div>
                             <div id="tmj" contenteditable="true" data-report-section="tmj">
                                 <p data-macro-selected="normal">
                                     Normal CT appearance of the temporomandibular joint. The mandibular condyle
@@ -765,8 +805,13 @@
                             </div>
                         </div>
                         <!-- Visualized Cervical Spine -->
-                        <div class="d-flex flex-column">
-                            <div class="label">Visualized Cervical Spine:</div>
+                        <div class="d-flex flex-column anatomy-section gap-2">
+                            <div class="d-flex flex-row  gap-2">
+                                <div class="label">Visualized Cervical Spine:</div>
+                                <a hreaf="#" class="add-impression" data-btn-type="impression"
+                                    data-impression-section="cervicalSpine"><i class="bi bi-plus-lg"></i> Add
+                                    Impression</a>
+                            </div>
                             <div id="cervicalSpine" contenteditable="true" data-report-section="cervicalSpine">
                                 <p data-macro-selected="normal">
                                     Normal appearance of the visualized cervical spine. The cervical vertebrae are
@@ -778,8 +823,13 @@
                             </div>
                         </div>
                         <!-- Salivary Glands, Lymph Nodes and Soft Tissues -->
-                        <div class="d-flex flex-column">
-                            <div class="label">Salivary Glands, Lymph Nodes and Soft Tissues:</div>
+                        <div class="d-flex flex-column anatomy-section gap-2">
+                            <div class="d-flex flex-row gap-2">
+                                <div class="label">Salivary Glands, Lymph Nodes and Soft Tissues:</div>
+                                <a href="#" class="add-impression" data-btn-type="impression"
+                                    data-impression-section="salivaryGlands"><i class="bi bi-plus-lg"></i> Add
+                                    Impression</a>
+                            </div>
                             <div id="salivaryGlands" contenteditable="true" data-report-section="salivaryGlands">
                                 <p data-macro-selected="normal">
                                     Limited evaluation of soft tissues and lowered sensitivity to detect pathology due
