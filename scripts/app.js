@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // const allMacroButtons = document.querySelectorAll('.dr-utility');
     const allReportSection = document.querySelectorAll('[data-report-section]');
     const allDropdownOptions = document.querySelectorAll('[data-additional-option]');
+    const reportBuilderSection = document.getElementById('builder-col');
 
     const allAddImpressionBtns = document.querySelectorAll('[data-impression-section]');
     // console.log(allDropdownOptions)
@@ -47,6 +48,38 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     getJsonData();
+
+
+    // Function checks if element is visible in the window. If not visible will scroll to it's position
+    const elementIsVisibleInViewport = (el) => {
+        console.log("Text Section ", el)
+        const { top, left, bottom, right } = el.getBoundingClientRect();
+        const { innerHeight, innerWidth } = window;
+        console.log("Section Top and Bottom: ", top, bottom)
+        console.log("Window Size: ", innerHeight);
+        // return partiallyVisible
+        //     ? ((top > 0 && top < innerHeight) ||
+        //         (bottom > 0 && bottom < innerHeight)) &&
+        //     ((left > 0 && left < innerWidth) || (right > 0 && right < innerWidth))
+        //     : top >= 0 && left >= 0 && bottom <= innerHeight && right <= innerWidth;
+
+        if (top > innerHeight) {
+            console.log("Greater than Window Height")
+            reportBuilderSection.scrollTo({
+                top: bottom,
+                // behavior: "smooth",
+            });
+        } else if (bottom < 133) {
+            console.log("Less than Header")
+            reportBuilderSection.scrollTo({
+                top: top,
+                // behavior: "smooth",
+            });
+        } else {
+            console.log("Element Visible")
+        }
+    };
+
 
     contentChangeAnimation = (activeSection) => {
         activeSection.classList.toggle('change-effect');
@@ -91,7 +124,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Appends new <p> in report
     appendNewParagraph = (macroSection, currentButton, textSection) => {
-        console.log(macroSection, currentButton, textSection)
         let newParagaph = document.createElement('p');
         newParagaph.setAttribute('data-macro-selected', currentButton);
         newParagaph.innerHTML = jsonData[macroSection][currentButton].definition;
@@ -135,6 +167,8 @@ document.addEventListener("DOMContentLoaded", () => {
         checkActiveStatus = () => {
             activeCount = activeSection.querySelectorAll(".btn.dr-utility.active-macro").length;
         }
+
+        elementIsVisibleInViewport(activeTextSection);
 
         // If statements check if button is Multi-select, and then target buttons current status
         if (multiSelect === "false") {
